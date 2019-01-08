@@ -1,0 +1,31 @@
+home:
+    path: /accueil
+    controller: App\Controller\HomeController::index
+
+    
+acheter:
+    path: /ventes
+    controller: App\Controller\VenteController::ventes
+    
+ 
+bien:
+     path: /biens/{slug}-{id}
+     controller: App\Controller\VenteController::voir
+     requirements:
+         slug: '[a-z0-9\-]*'
+         
+admin:
+     path: /gerer
+     controller: App\Controller\Admin\AdminProprieteController::index
+     
+adminbien:
+     path: /gerer/{id}
+     controller: App\Controller\Admin\AdminProprieteController::edit
+     
+adminnouveaubien:
+     path: /nouveaubien
+     controller: App\Controller\Admin\AdminProprieteController::nouveau
+     
+supprimerbien:
+     path: /supprimer/{id}
+     controller: App\Controller\Admin\AdminProprieteController::supprime
