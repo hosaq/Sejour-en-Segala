@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImmoRepository")
+ * @UniqueEntity("titre")
  */
 class Immo
 {
@@ -19,6 +22,7 @@ class Immo
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=5, max=255)
      */
     private $titre;
 
@@ -34,16 +38,19 @@ class Immo
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Range(min=1000, max=10000000)
      */
     private $prix;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Range(min=10, max=1000)
      */
     private $surface;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Range(min=1, max=100000)
      */
     private $surface_terrain;
 
@@ -59,6 +66,11 @@ class Immo
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Regex(
+     *     pattern="/^[0-9]{5}$/",
+     *     match=true,
+     *     message="code postal invalide"
+     * )
      */
     private $code_postal;
 

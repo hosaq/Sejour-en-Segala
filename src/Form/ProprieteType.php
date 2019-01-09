@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ProprieteType extends AbstractType
 {
@@ -22,7 +23,10 @@ class ProprieteType extends AbstractType
             ->add('pays')
             ->add('ville')
             ->add('code_postal')
-            ->add('vendu')
+            ->add('vendu', ChoiceType::class, array(
+                      'choices' => array('En vente' => 'En vente', 'Vendu' =>'Vendu', 
+                      'Sous compromis' =>'Sous compromis'),'label'=>'Statut',
+                      ))
             #->add('date',DateType::class,array(
              #   'widget'=>'single_text',
               #  'format'=>'dd-MM-yyyy',
