@@ -15,17 +15,24 @@ bien:
          slug: '[a-z0-9\-]*'
          
 admin:
-     path: /gerer
+     path: /admin/gerer/
      controller: App\Controller\Admin\AdminProprieteController::index
      
 adminbien:
-     path: /gerer/{id}
+     path: /admin/gerer/{id}
      controller: App\Controller\Admin\AdminProprieteController::edit
      
 adminnouveaubien:
-     path: /nouveaubien
+     path: /admin/nouveaubien/
      controller: App\Controller\Admin\AdminProprieteController::nouveau
      
 supprimerbien:
-     path: /supprimer/{id}
+     path: /admin/supprimer/{id}
      controller: App\Controller\Admin\AdminProprieteController::supprime
+     
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+    
+logout:
+    path: /logout
