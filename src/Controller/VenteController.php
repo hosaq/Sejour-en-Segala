@@ -2,9 +2,13 @@
 namespace App\Controller;
 
 use App\Entity\Immo; 
+use App\Form\BienRechercheType;
+use App\Entity\BienRecherche;
 use App\Repository\ImmoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Common\Persistence\ObjectManager;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class VenteController extends AbstractController
 {
@@ -24,22 +28,22 @@ class VenteController extends AbstractController
         $this->em=$em;
     }
 
-    public function ventes()
+    public function ventes(PaginatorInterface $paginator,Request $request)
     { 
-        /*$bien=new Immo();
-        $bien->setTitre('Maison de village avec terrasse et jardin')
-                ->setPrix(185000)
-                ->setVille('Monestiés');
-        $em=$this->getDoctrine()->getManager();
-        */
+        $recherche=new BienRecherche();
+        $form= $this->createForm(BienRechercheType::class, $recherche);
+        $form->handleRequest($request);
         
-        $bien=$this->repository->findByPrix(180000,200000);
+        $bien=$paginator->paginate(
+                $this->repository->findAllVisibleQuery($recherche),
+                $request->query->getInt('page', 1),
+                12
         
-        /*$date = new \DateTime('@'.strtotime('now'));
-        $bien[0]->setDate($date);
-         $this->em->flush();
-         */
-        return $this->render('immo/vente.html.twig',['bien'=>$bien]);
+        );
+        return $this->render('immo/vente.html.twig',[
+            'bien'=>$bien,
+            'form'=>$form->createView()
+            ]);
     }
     
     

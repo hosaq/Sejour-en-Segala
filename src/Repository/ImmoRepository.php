@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Immo;
+use App\Entity\BienRecherche;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -21,18 +22,34 @@ class ImmoRepository extends ServiceEntityRepository
      
     
     
-    public function findByPrix($value1,$value2)
+    public function findByPrix()
     {
-        return $this->createQueryBuilder('i')
-            ->andWhere('i.prix > :val1')
-            ->setParameter('val1', $value1)
-             ->andWhere('i.prix <:val2')
-            ->setParameter('val2', $value2)
-            ->orderBy('i.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.prix > :val1')
+            ->setParameter('val1', 1000)
+             ->andWhere('p.prix <:val2')
+            ->setParameter('val2', 1000000)
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(100)
+            //->getQuery()
+            //->getResult()
         ;
+    }
+    
+    public function findAllVisibleQuery(BienRecherche $recherche){
+        
+        $query= $this->findByPrix();
+        if($recherche->getPrixmax()){
+            $query=$query
+                    ->andWhere('p.prix<= :prixmax')
+                    ->setParameter('prixmax', $recherche->getPrixmax());
+        }
+        if($recherche->getSurfacemin()){
+            $query=$query
+                    ->andWhere('p.surface>= :surfacemin')
+                    ->setParameter('surfacemin', $recherche->getSurfacemin());
+        }
+        return $query->getQuery();
     }
     // /**
     //  * @return Immo[] Returns an array of Immo objects

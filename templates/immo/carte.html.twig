@@ -1,0 +1,23 @@
+
+
+<div class="card-mb-4">
+    <div class="card-body" style="border-style:solid; border-color:#cc2233; border-width: 1px; margin-top: 20px">
+        <h5 class="card-title">
+            <a href="{{path('bien',{id:biens.id,slug:biens.slug})}}">{{biens.titre}}</a>
+        </h5>
+        <p class="card-text">{{biens.ville}} ( {{biens.codepostal}} )</p>
+        <p class="card-text">{{biens.surface}} m²</p>
+        <p class="card-text" style="font-size:2rem; font-weight: bold">{{biens.prix}} €</p>
+        <p class="card-text" >En vente depuis le : {{biens.date|date('d-m-Y')}} </p>
+    </div>
+</div>
+
+           
+            
+          
+
+
+
+
+
+
