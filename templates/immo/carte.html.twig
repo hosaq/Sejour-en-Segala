@@ -1,19 +1,29 @@
 
 
 <div class="card-mb-4">
-    <div class="card-body" style="border-style:solid; border-color:#cc2233; border-width: 1px; margin-top: 20px">
+    <div class="card-body carte" style="">
         <h5 class="card-title">
             <a href="{{path('bien',{id:biens.id,slug:biens.slug})}}">{{biens.titre}}</a>
         </h5>
+        <p class="chevrondroit" >></p>
+        <p class="chevrongauche"><</p>
+        {%for photo in biens.photos %}
+            {%if loop.index <6 %}
+                <div class="col cadre" >
+                    <img src="{{ vich_uploader_asset(photo,'imageFile')}}" class="photocadre" style="z-index: 10;" alt="image">
+                </div>
+    {%endif%}
+            {%endfor%}
+            <div class="rens">
         <p class="card-text">{{biens.ville}} ( {{biens.codepostal}} )</p>
         <p class="card-text">{{biens.surface}} m²</p>
         <p class="card-text" style="font-size:2rem; font-weight: bold">{{biens.prix}} €</p>
         <p class="card-text" >En vente depuis le : {{biens.date|date('d-m-Y')}} </p>
+        </div>
     </div>
 </div>
 
-           
-            
+  
           
 
 

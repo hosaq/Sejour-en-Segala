@@ -1,34 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'immo/menu.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="css/carte.css">
+    {% endblock %}
+    
+{% block contenu %}
 
-{% block body %}
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #28292a !important;">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" style="color: #eae9e8 !important;" href="{{path('home')}}">Accueil</a>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" style="color: #eae9e8 !important;" href="{{path('acheter')}}">Acheter <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: #eae9e8 !important;" href="#">Vendre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" style="color: #eae9e8 !important;" href="#">Louer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" style="color: #eae9e8 !important;" href="#">Mettre en location</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+    
       
           <div class="jumbotron">
               <div class="container">
@@ -39,6 +16,9 @@
                       </div>
                       <div class="col">
                           {{form_row(form.Surfacemin)}}
+                      </div>
+                      <div class="col">
+                          {{form_row(form.Ville)}}
                       </div>
                       <div class="col">
                           <div class="form-group">
@@ -75,4 +55,7 @@
 
 
 
+{% endblock %}
+{% block javascripts %}
+    <script src="js/slidephotos.js"></script>
 {% endblock %}

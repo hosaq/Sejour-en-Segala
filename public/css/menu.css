@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://themes.getmotopress.com/mountainview/wp-content/themes/mountainview/images/bg_image.jpg");
+    background-position: center top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.imageprincipale{
+   
+}
+.ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+}
+
+.lora{
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+}
+
+body, button, input, select, optgroup, textarea {
+    color: #383838;
+    font-family: Lora, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.menu{
+    max-width: 1516px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 24px rgba(61, 61, 61, 0.1);
+    box-shadow: 0 0 24px rgba(61, 61, 61, 0.1);
+    background: #fff;
+    overflow: hidden;
+}
+
+.flex-container{
+    max-width: 1516px;
+    background-color: #fff;
+    resize: horizontal;
+    overflow:visible;
+    display: flex;
+    margin: 0em;
+    height:50px;
+}
+.las{
+    margin: 0em 1em;
+    padding: 0.5em;
+    width: 300px;
+    
+    background-color: #fff;
+    color : #383838;
+    font-family: 'lora', serif;
+    font-size: 0.6rem;
+    padding: 1em;
+}
+.logo{
+    overflow: visible;
+    height: 150px;
+    background-color: #9daeff;
+    z-index: 3;
+    margin-left: 3em;
+    font-size : 2em;   
+    padding:0.3em 1em;
+}
+
+.initial{
+    flex: initial;
+}
+
+.auto{
+
+    flex: auto;
+}
+
+.none{
+    flex: none;
+}
+
+.four{
+    flex: 4;
+}
+
+.two{
+    flex: 2;
+}
+
+.one{
+    flex: 1;
+}
+.flex-containe{
+    max-width: 1516px;
+    background-color: #28292af;
+    resize: horizontal;
+    overflow:visible;
+    display: flex;
+    margin: 0em;
+    
+}

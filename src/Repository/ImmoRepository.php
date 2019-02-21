@@ -49,6 +49,11 @@ class ImmoRepository extends ServiceEntityRepository
                     ->andWhere('p.surface>= :surfacemin')
                     ->setParameter('surfacemin', $recherche->getSurfacemin());
         }
+        if($recherche->getVille()){
+            $query=$query
+                    ->andWhere('p.ville= :ville')
+                    ->setParameter('ville', $recherche->getVille());
+        }
         return $query->getQuery();
     }
     // /**

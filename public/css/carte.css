@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+.carte{
+    border-style:solid; 
+    border-color:#cc2233; 
+    border-width: 1px; 
+    margin-top: 20px;
+    height: 550px;
+}
+.cadre{
+    width:100%;
+    margin:0px;
+    min-height: 0px;
+   
+}
+.chevrondroit{
+    position: absolute;
+    top:200px;
+    right: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche{
+    position: absolute;
+    top:200px;
+    left: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.rens{
+    position: absolute;
+    bottom: 5px;
+}
+.photocadre{
+    position: absolute;
+    width:100%;
+    height: 250px;
+    top:20px;
+    left: 0px;
+    overflow : hidden;
+    z-index: 10;
+    max-height: 1000px;
+    
+    
+}
+.photocadre.hidden{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-height: 0;
+}

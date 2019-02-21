@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class ProprieteType extends AbstractType
 {
@@ -17,6 +18,8 @@ class ProprieteType extends AbstractType
             ->add('titre')
             ->add('type')
             ->add('description')
+             ->add('description_region')   
+             ->add('description_precise') 
             ->add('prix')
             ->add('surface')
             ->add('surface_terrain')
@@ -27,6 +30,11 @@ class ProprieteType extends AbstractType
                       'choices' => array('En vente' => 'En vente', 'Vendu' =>'Vendu', 
                       'Sous compromis' =>'Sous compromis'),'label'=>'Statut',
                       ))
+            ->add('photoFiles', FileType::class, [
+                'required'=> false,
+                'multiple'=>true
+            ])
+                
             #->add('date',DateType::class,array(
              #   'widget'=>'single_text',
               #  'format'=>'dd-MM-yyyy',

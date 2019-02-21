@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BienRechercheType extends AbstractType
 {
@@ -23,6 +24,11 @@ class BienRechercheType extends AbstractType
                 'label'=>false,
                 'attr'=>['placeholder'=>'Surface minimale']
             ])
+            ->add('Ville',TextType::class,[
+                'required'=>false,
+                'label'=>false,
+                'attr'=>['placeholder'=>'Ville']
+            ])    
         ;
     }
 

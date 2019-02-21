@@ -2,14 +2,21 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+/*use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+ */
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImmoRepository")
  * @UniqueEntity("titre")
+ * 
  */
 class Immo
 {
@@ -19,6 +26,10 @@ class Immo
      * @ORM\Column(type="integer")
      */
     private $id;
+    
+  
+    
+  
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -83,9 +94,34 @@ class Immo
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $date;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Photos", mappedBy="immo", orphanRemoval=true, 
+     * cascade={"persist"})
+     */
+    private $photos;
+    
+    /**
+     * @Assert\All({
+     *     @Assert\Image(mimeTypes="image/jpeg")
+     * })
+     */
+    private $photoFiles;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description_region;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description_precise;
+    
     public function  __construct()
     {
         $this->date=new \DateTime();
+        $this->photos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -226,6 +262,80 @@ class Immo
     public function setDate(?\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+    
+   
+
+    /**
+     * @return Collection|Photos[]
+     */
+    public function getPhotos(): Collection
+    {
+        return $this->photos;
+    }
+
+    public function addPhoto(Photos $photo): self
+    {
+        if (!$this->photos->contains($photo)) {
+            $this->photos[] = $photo;
+            $photo->setImmo($this);
+        }
+
+        return $this;
+    }
+
+    public function removePhoto(Photos $photo): self
+    {
+        if ($this->photos->contains($photo)) {
+            $this->photos->removeElement($photo);
+            // set the owning side to null (unless already changed)
+            if ($photo->getImmo() === $this) {
+                $photo->setImmo(null);
+            }
+        }
+
+        return $this;
+    }
+    
+    public function getPhotoFiles()
+    {
+        return $this->photoFiles;
+    }
+
+    public function setPhotoFiles($photoFiles): self
+    {
+        foreach($photoFiles as $photoFile){
+            $photo= new Photos();
+            $photo->setImageFile($photoFile);
+            $this->addPhoto($photo);
+        }
+        $this->photoFiles = $photoFiles;
+
+        return $this;
+    }
+
+    public function getDescriptionRegion(): ?string
+    {
+        return $this->description_region;
+    }
+
+    public function setDescriptionRegion(?string $description_region): self
+    {
+        $this->description_region = $description_region;
+
+        return $this;
+    }
+
+    public function getDescriptionPrecise(): ?string
+    {
+        return $this->description_precise;
+    }
+
+    public function setDescriptionPrecise(?string $description_precise): self
+    {
+        $this->description_precise = $description_precise;
 
         return $this;
     }
