@@ -9,6 +9,7 @@ class Animation {
         let nombrePhotos = 0;
         let photos = element.querySelectorAll('.photocadre');
         nombrePhotos = photos.length;
+        console.log(nombrePhotos);
         let n = nombrePhotos - 1;
         while (n > 0) {
             let m = photos[n].style.zIndex;         

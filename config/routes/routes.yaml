@@ -2,6 +2,9 @@ home:
     path: /accueil
     controller: App\Controller\HomeController::index
 
+promesse:
+    path: /promesse
+    controller: App\Controller\HomeController::promesse
     
 acheter:
     path: /ventes
@@ -36,3 +39,8 @@ login:
     
 logout:
     path: /logout
+
+supprimerphoto:
+     path: /admin/supprimerphoto/{id}
+     controller: App\Controller\Admin\AdminPhotosController::supprimephoto
+     

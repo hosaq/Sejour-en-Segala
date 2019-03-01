@@ -1,44 +1,60 @@
 
-    {{form_start(form)}}
-    <div class="row">
-        <div class="col-md-5">{{ form_row(form.titre)}}</div>
-        <div class="col-md-5">{{ form_row(form.type)}}</div>
-        <div class="col-md-2">{{ form_row(form.prix)}}</div>
-        
-    </div>
-    <div class="row">
-        <div class="col-md-2">{{ form_row(form.surface)}}</div>
-        <div class="col-md-2">{{ form_row(form.surface_terrain)}}</div>
-        <div class="col-md-2">{{ form_row(form.ville)}}</div>
-        <div class="col-md-2">{{ form_row(form.code_postal)}}</div>
-        <div class="col-md-2">{{ form_row(form.pays)}}</div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">{{form_row(form.description)}}</div>
-    </div>
-     <div class="row">
-        <div class="col-md-12">{{form_row(form.description_region)}}</div>
-    </div>
-     <div class="row">
-        <div class="col-md-12">{{form_row(form.description_precise)}}</div>
-    </div>
-    <div class="">
-        <div class="col-md-12">
-            {%for photo in bien.photos %}
-                <div class="row flex justify-content-start flex-wrap" style="display: inline-block; margin:5px">
-                    <img src="{{ vich_uploader_asset(photo,'imageFile')}}" 
-                         width="100px" alt="image">
-                </div>
-            {%endfor%}
-                     
-    </div>
-    <div class="row">
-        <div class="col-md-3">{{form_row(form.photoFiles)}}</div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">{{form_widget(form)}}</div>
-    </div>
-    <div class="text-right">
-        <button class="btn btn-primary" >{{button|default('Enregistrer') }}</button>
-    </div>
-    {{form_end(form)}}
+
+
+{{form_start(form)}}
+<div class="row">
+    <div class="col-md-5">{{ form_row(form.titre)}}</div>
+    <div class="col-md-5">{{ form_row(form.type)}}</div>
+    <div class="col-md-2">{{ form_row(form.prix)}}</div>
+
+</div>
+<div class="row">
+    <div class="col-md-2">{{ form_row(form.surface)}}</div>
+    <div class="col-md-2">{{ form_row(form.surface_terrain)}}</div>
+    <div class="col-md-2">{{ form_row(form.ville)}}</div>
+    <div class="col-md-2">{{ form_row(form.code_postal)}}</div>
+    <div class="col-md-2">{{ form_row(form.pays)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-12">{{form_row(form.description)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-12">{{form_row(form.description_region)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-12">{{form_row(form.description_precise)}}</div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-3">{{form_row(form.photoFiles)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-2">{{form_widget(form)}}</div>
+</div>
+
+
+
+
+
+<div class="text-right">
+    <button class="btn btn-primary" >{{button|default('Enregistrer') }}</button>
+</div>
+{{form_end(form)}}
+
+<div class="cadrephoto">
+
+    {%for photo in bien.photos %}
+        <div class="row flex justify-content-start flex-wrap blockimg" style="">
+            <a href="{{path('supprimerphoto',{id: photo.id})}}" class="btn btndanger"
+               data-delete data-token="{{csrf_token('delete'~photo.id)}}">
+
+            <button class="btn btn-danger" style="margin-top: 0%">Supprimer</button></a>
+            <br>
+            <img src="{{ vich_uploader_asset(photo,'imageFile')}}" 
+                 class="imgapercu" alt="image">
+        </div>
+    {%endfor%}
+
+</div>

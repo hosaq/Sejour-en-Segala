@@ -14,4 +14,9 @@ class HomeController extends AbstractController
         return $this->render('immo/home.html.twig');
     }
     
+    public function promesse()
+    {
+        return $this->render('promesse.html.twig');
+    }
+    
 }

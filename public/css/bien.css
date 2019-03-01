@@ -20,6 +20,7 @@ body{
     background-attachment: scroll;
 }
 .imageprincipale{
+    max-height: 650px;
     /*background-image:url("../images/facade.jpg");*/
 }
 .ubuntu{
