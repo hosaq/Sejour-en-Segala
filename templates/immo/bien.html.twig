@@ -7,12 +7,24 @@
 
 {% endblock %}
 {% block body %}
-    <body style='background-image: url("{{vich_uploader_asset(bien.photos[15], 'imageFile')}}");'>
-          <div class="menu">
+    {%if bien.fond %}
+        <body style='background-image: url("{{vich_uploader_asset(bien, 'fondFile')}}");'>
+        {%else%}
+        <body style='background-image: url("/images/orage.jpg");'>
+
+        {%endif%}
+
+        <div class="menu">
             <div class="flex-container">
 
                 <div class="las auto logo">
-                    <div style="display: inline-block;float: left;padding: 0.7em" ><img src="{{vich_uploader_asset(bien.photos[16], 'imageFile')}}" style=""></div>
+                    <div style="display: inline-block;float: left;padding: 0.7em" >
+                        {%if bien.larges %}
+                            <img src="{{vich_uploader_asset(bien, 'logosFile')}}" alt="logo">
+                        {%else%}
+                            <img class="auto" src="/images/logo2.jpg" alt="logo">
+                        {%endif%}
+                    </div>
                     <p class="ubuntu" style="color: #fff;font-size: 1.1em;text-align: center">{{bien.titre}}</p>
                 </div>
                 <div class="las auto">
@@ -53,7 +65,11 @@
                 </div>
             </nav>
             <div class="imageprincipale flex-containe" >
-                <img class="auto" src="{{vich_uploader_asset(bien.photos[0], 'imageFile')}}" >
+                {%if bien.larges %}
+                    <img class="auto" src="{{vich_uploader_asset(bien, 'largesFile')}}" alt="imagelarge">
+                {%else%}
+                    <img class="auto" src="/images/clarge.jpg" alt="imagelarge">
+                {%endif%}
             </div>
             <div class="contenu ">
                 <div class="principal">
@@ -62,21 +78,42 @@
                     </div>
                     <h2>{{bien.titre}}</h2>
                     <div class="imagemilieu" >
-                        <img class="milieu" src="{{vich_uploader_asset(bien.photos[5], 'imageFile')}}" >
+                        {%if bien.larges %}
+                            <img class="milieu" src="{{vich_uploader_asset(bien, 'rappelfondsFile')}}" >
+                        {%else%}
+                            <img class="milieu" src="/images/cprincipal.jpg" alt="centrale">
+                        {%endif%}
+
                     </div>
                     <p class="description">{{bien.descriptionRegion}}</p>
                     <div style="background-color: #fff;width: 110%;margin-left: -10%;padding: 10%">
                         <div class="mosaique " >
                             <div class="auto imagesmos">
-                                <img class="auto imagemos" src="{{vich_uploader_asset(bien.photos[2], 'imageFile')}}" ><br>
+                                {%if bien.larges %}
+                                    <img class="auto imagemos" src="{{vich_uploader_asset(bien, 'regionsFile')}}" ><br>
+                                {%else%}
+                                    <img class="auto imagemos" src="/images/cregion.jpg" alt="region"><br>
+                                {%endif%}
+
                                 <a href="#">Région</a>
                             </div>
                             <div class="auto imagesmos">
-                                <img class="auto imagemos" src="{{vich_uploader_asset(bien.photos[6], 'imageFile')}}" ><br>
+                                {%if bien.larges %}
+                                    <img class="auto imagemos" src="{{vich_uploader_asset(bien, 'chambresFile')}}" ><br>
+                                {%else%}
+                                    <img class="auto imagemos" src="/images/cchambre.jpg" alt="chambre"><br>
+                                {%endif%}
+                                
                                 <a href="#">Chambres</a>
                             </div>
                             <div class="auto imagesmos">
-                                <img class="auto imagemos" src="{{vich_uploader_asset(bien.photos[4], 'imageFile')}}" ><br>
+                                {%if bien.larges %}
+                                    <img class="auto imagemos" src="{{vich_uploader_asset(bien, 'communsFile')}}" ><br>
+                                {%else%}
+                                    <img class="auto imagemos" src="/images/ccommuns.jpg" alt="communs"><br>
+                                {%endif%}
+                                
+                                
                                 <a href="#">Communs</a>
                             </div>
                         </div>
@@ -85,7 +122,12 @@
                         <p><span class="gros">“ </span>{{bien.description}}<span class="gros"> “</span></p>
                         <p style="font-weight: 600;font-family: Ubuntu, sans-serif;">&mdash; Gilbert Gall</p>
                         <a href="#" class="afte">
-                            <img class="ronde" src="{{vich_uploader_asset(bien.photos[14], 'imageFile')}}">
+                            {%if bien.larges %}
+                                    <img class="ronde" src="{{vich_uploader_asset(bien, 'propriosFile')}}">
+                                {%else%}
+                                    <img class="ronde" src="/images/portrait.jpeg" alt="proprietaire">
+                                {%endif%}
+                            
 
                         </a>
                     </div>
@@ -164,12 +206,22 @@
                     </div>
                     <h3>Galerie</h3>
                     <section class="galerie">
-                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[8], 'imageFile')}}" >
-                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[9], 'imageFile')}}" >
-                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[10], 'imageFile')}}" >
-                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[11], 'imageFile')}}" >
-                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[12], 'imageFile')}}" >
-                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[13], 'imageFile')}}" >
+                        {%if bien.photos|length > 4%}
+                                    <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[0], 'imageFile')}}" >
+                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[1], 'imageFile')}}" >
+                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[2], 'imageFile')}}" >
+                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[3], 'imageFile')}}" >
+                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[4], 'imageFile')}}" >
+                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[5], 'imageFile')}}" >
+                                {%else%}
+                                    <img class="auto imagemo" src="/images/carre6.jpg" alt="communs">
+                                    <img class="auto imagemo" src="/images/carre5.jpg" alt="communs">
+                                    <img class="auto imagemo" src="/images/carre4.jpg" alt="communs">
+                                    <img class="auto imagemo" src="/images/carre2.jpg" alt="communs">
+                                    <img class="auto imagemo" src="/images/carre1.jpg" alt="communs">
+                                    <img class="auto imagemo" src="/images/carre3.jpg" alt="communs">
+                                {%endif%}
+                        
 
                     </section>
                     <div class="hrg">
@@ -234,8 +286,8 @@
         </div>
 
 
-    
 
-{% endblock %}
+
+    {% endblock %}
 
 

@@ -4,10 +4,37 @@ vich_uploader:
     mappings:
         biens_image:
             uri_prefix: /images/immo
-            upload_destination: '%kernel.project_dir%/public/images/immo'
-            
-
-    #mappings:
-    #    products:
-    #        uri_prefix: /images/products
-    #        upload_destination: '%kernel.project_dir%/public/images/products'
+            upload_destination: '%kernel.project_dir%/public/images/immo'          
+        biens_fonds:
+            uri_prefix: /images/fonds
+            upload_destination: '%kernel.project_dir%/public/images/fonds'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        biens_logos:
+            uri_prefix: /images/logos
+            upload_destination: '%kernel.project_dir%/public/images/logos'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        biens_larges:
+            uri_prefix: /images/larges
+            upload_destination: '%kernel.project_dir%/public/images/larges'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        biens_rappelfonds:
+            uri_prefix: /images/rappelfonds
+            upload_destination: '%kernel.project_dir%/public/images/rappelfonds'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        biens_regions:
+            uri_prefix: /images/regions
+            upload_destination: '%kernel.project_dir%/public/images/regions'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        biens_chambres:
+            uri_prefix: /images/chambres
+            upload_destination: '%kernel.project_dir%/public/images/chambres'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer            
+        biens_communs:
+            uri_prefix: /images/communs
+            upload_destination: '%kernel.project_dir%/public/images/communs'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        biens_proprios:
+            uri_prefix: /images/proprios
+            upload_destination: '%kernel.project_dir%/public/images/proprios'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer            
+    

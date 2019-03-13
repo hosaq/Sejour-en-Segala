@@ -8,15 +8,15 @@ use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-/*use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
- */
+ 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImmoRepository")
  * @UniqueEntity("titre")
- * 
+ * @Vich\Uploadable()
  */
 class Immo
 {
@@ -28,9 +28,110 @@ class Immo
     private $id;
     
   
-    
-  
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $fond;
 
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_fonds", fileNameProperty="fond")
+     */
+    private $fondFile;
+  
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $logos;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_logos", fileNameProperty="logos")
+     */
+    private $logosFile;
+
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $regions;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_regions", fileNameProperty="regions")
+     */
+    private $regionsFile;
+    
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $rappelfonds;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_rappelfonds", fileNameProperty="rappelfonds")
+     */
+    private $rappelfondsFile;
+
+     /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $larges;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_larges", fileNameProperty="larges")
+     */
+    private $largesFile;
+
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $chambres;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_chambres", fileNameProperty="chambres")
+     */
+    private $chambresFile;
+
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $communs;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_communs", fileNameProperty="communs")
+     */
+    private $communsFile;
+    
+    /**
+     * @var string|null
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $proprios;
+
+    /**
+     * @var File|null
+     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Vich\UploadableField(mapping="biens_proprios", fileNameProperty="proprios")
+     */
+    private $propriosFile;
+    
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=5, max=255)
@@ -117,6 +218,11 @@ class Immo
      * @ORM\Column(type="text", nullable=true)
      */
     private $description_precise;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updated_at;
     
     public function  __construct()
     {
@@ -339,4 +445,305 @@ class Immo
 
         return $this;
     }
+    
+    /**
+     * @return null|string
+     */
+    public function getFond(): ?string
+    {
+        return $this->fond;
+    }
+
+    /**
+     * @param null|string $fond
+     * @return Immo
+     */
+    public function setFond(?string $fond): Immo
+    {
+        $this->fond = $fond;
+        return $this;
+    }
+
+    /**
+     * @return null|File
+     */
+    public function getFondFile(): ?File
+    {
+        return $this->fondFile;
+    }
+
+    /**
+     * @param null|File $fondFile
+     * @return Immo
+     */
+    public function setFondFile(?File $fondFile): Immo
+    {
+        $this->fondFile = $fondFile;
+        if ($this->fondFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+        
+    /**
+     * @return null|string
+     */
+    public function getLogos(): ?string
+    {
+        return $this->logos;
+    }
+
+    /**
+     * @param null|string $logos
+     * @return Immo
+     */
+    public function setLogos(?string $logos): Immo
+    {
+        $this->logos = $logos;
+        return $this;
+    }
+
+    /**
+     * @return null|File
+     */
+    public function getLogosFile(): ?File
+    {
+        return $this->logosFile;
+    }
+
+    /**
+     * @param null|File $logosFile
+     * @return Immo
+     */
+    public function setLogosFile(?File $logosFile): Immo
+    {
+        $this->logosFile = $logosFile;
+        if ($this->logosFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+    
+    
+     /**
+     * @return null|string
+     */
+    public function getLarges(): ?string
+    {
+        return $this->larges;
+    }
+
+    /**
+     * @param null|string $larges
+     * @return Immo
+     */
+    public function setLarges(?string $larges): Immo
+    {
+        $this->larges = $larges;
+        return $this;
+    }
+
+    /**
+     * @return null|File
+     */
+    public function getLargesFile(): ?File
+    {
+        return $this->largesFile;
+    }
+
+    /**
+     * @param null|File $largesFile
+     * @return Immo
+     */
+    public function setLargesFile(?File $largesFile): Immo
+    {
+        $this->largesFile = $largesFile;
+        if ($this->largesFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+ 
+    
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    {
+        $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+    public function getRappelfonds(): ?string
+    {
+        return $this->rappelfonds;
+    }
+
+    public function setRappelfonds(?string $rappelfonds): self
+    {
+        $this->rappelfonds = $rappelfonds;
+
+        return $this;
+    }
+    
+     /**
+     * @return null|File
+     */
+ 
+    public function getRappelfondsFile(): ?File
+    {
+        return $this->rappelfondsFile;
+    }
+
+    /**
+     * @param null|File $rappelfondsFile
+     * @return Immo
+     */
+    public function setRappelfondsFile(?File $rappelfondsFile): Immo
+    {
+        $this->rappelfondsFile = $rappelfondsFile;
+        if ($this->rappelfondsFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getRegions(): ?string
+    {
+        return $this->regions;
+    }
+
+    public function setRegions(?string $regions): self
+    {
+        $this->regions = $regions;
+
+        return $this;
+    }
+     /**
+     * @return null|File
+     */
+ 
+    public function getRegionsFile(): ?File
+    {
+        return $this->regionsFile;
+    }
+
+    /**
+     * @param null|File $regionsFile
+     * @return Immo
+     */
+    public function setRegionsFile(?File $regionsFile): Immo
+    {
+        $this->regionsFile = $regionsFile;
+        if ($this->regionsFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    
+    
+    public function getChambres(): ?string
+    {
+        return $this->chambres;
+    }
+
+    public function setChambres(?string $chambres): self
+    {
+        $this->chambres = $chambres;
+
+        return $this;
+    }
+     /**
+     * @return null|File
+     */
+ 
+    public function getChambresFile(): ?File
+    {
+        return $this->chambresFile;
+    }
+
+    /**
+     * @param null|File $chambresFile
+     * @return Immo
+     */
+    public function setChambresFile(?File $chambresFile): Immo
+    {
+        $this->chambresFile = $chambresFile;
+        if ($this->chambresFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getCommuns(): ?string
+    {
+        return $this->communs;
+    }
+
+    public function setCommuns(?string $communs): self
+    {
+        $this->communs = $communs;
+
+        return $this;
+    }
+     /**
+     * @return null|File
+     */
+ 
+    public function getCommunsFile(): ?File
+    {
+        return $this->communsFile;
+    }
+
+    /**
+     * @param null|File $communsFile
+     * @return Immo
+     */
+    public function setCommunsFile(?File $communsFile): Immo
+    {
+        $this->communsFile = $communsFile;
+        if ($this->communsFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getProprios(): ?string
+    {
+        return $this->proprios;
+    }
+
+    public function setProprios(?string $proprios): self
+    {
+        $this->proprios = $proprios;
+
+        return $this;
+    }
+     /**
+     * @return null|File
+     */
+ 
+    public function getPropriosFile(): ?File
+    {
+        return $this->propriosFile;
+    }
+
+    /**
+     * @param null|File $propriosFile
+     * @return Immo
+     */
+    public function setPropriosFile(?File $propriosFile): Immo
+    {
+        $this->propriosFile = $propriosFile;
+        if ($this->propriosFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
 }

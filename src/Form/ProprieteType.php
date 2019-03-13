@@ -30,6 +30,31 @@ class ProprieteType extends AbstractType
                       'choices' => array('En vente' => 'En vente', 'Vendu' =>'Vendu', 
                       'Sous compromis' =>'Sous compromis'),'label'=>'Statut',
                       ))
+            ->add('fondFile', FileType::class, [
+                'required' => false
+            ])
+            ->add('logosFile', FileType::class, [
+                'required' => false
+            ]) 
+             ->add('largesFile', FileType::class, [
+                'required' => false
+            ])    
+             ->add('rappelfondsFile', FileType::class, [
+                'required' => false
+            ])    
+             ->add('regionsFile', FileType::class, [
+                'required' => false
+            ])    
+              ->add('chambresFile', FileType::class, [
+                'required' => false
+            ])    
+              ->add('communsFile', FileType::class, [
+                'required' => false
+            ])    
+              ->add('propriosFile', FileType::class, [
+                'required' => false
+            ])    
+                  
             ->add('photoFiles', FileType::class, [
                 'required'=> false,
                 'multiple'=>true

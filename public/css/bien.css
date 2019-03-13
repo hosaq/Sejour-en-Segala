@@ -298,8 +298,8 @@ h3{
 }
 .ronde{
 
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 80px;
+    max-width: 80px;
     border-radius: 100%;
     border: 2px;
     border-color: #fff;
