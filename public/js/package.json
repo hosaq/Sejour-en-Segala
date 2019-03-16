@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "places": "^0.0.2",
+    "places.js": "^1.16.1"
+  }
+}

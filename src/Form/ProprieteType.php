@@ -23,9 +23,13 @@ class ProprieteType extends AbstractType
             ->add('prix')
             ->add('surface')
             ->add('surface_terrain')
+            ->add('adresse')   
             ->add('pays')
+            ->add('region')
             ->add('ville')
             ->add('code_postal')
+            ->add('lat')
+            ->add('lng')    
             ->add('vendu', ChoiceType::class, array(
                       'choices' => array('En vente' => 'En vente', 'Vendu' =>'Vendu', 
                       'Sous compromis' =>'Sous compromis'),'label'=>'Statut',

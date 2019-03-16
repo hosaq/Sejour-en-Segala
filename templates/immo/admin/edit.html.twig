@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="../../css/formulairebien.css">
+    
+   
+
 {% endblock %}
 {% block body %}
 
@@ -43,5 +46,12 @@
 
 {% endblock %}
 {% block javascripts %}
+    
+    {{ encore_entry_script_tags('app') }}
+        <script src="{{ asset('build/app.js') }}"></script>
+        <!-- Renders app.js & a webpack runtime.js file
+                <script src="/build/runtime.js"></script>
+                <script src="/build/app.js"></script> -->
     <script src="../../js/suppr.js"></script>
+    
 {% endblock %}
