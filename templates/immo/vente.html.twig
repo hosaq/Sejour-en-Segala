@@ -1,36 +1,49 @@
 {% extends 'immo/menu.html.twig' %}
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="css/carte.css">
+    <link href="https://fonts.googleapis.com/css?family=Italiana|ZCOOL+XiaoWei" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Muli|Quicksand|Raleway|Tajawal" rel="stylesheet"> 
     {% endblock %}
     
 {% block contenu %}
 
-    
-      
-          <div class="jumbotron">
-              <div class="container">
-                  {{form_start(form)}}
-                  <div class="form-row align-items-end">
-                      <div class="col">
-                          {{form_row(form.Prixmax)}}
-                      </div>
-                      <div class="col">
-                          {{form_row(form.Surfacemin)}}
-                      </div>
-                      <div class="col">
-                          {{form_row(form.Ville)}}
-                      </div>
-                      <div class="col">
-                          <div class="form-group">
-                              <button class="btn btn-primary">Rechercher</button>
-                          </div>
-                      </div>
-                  </div>
-                  {{form_end(form)}}
-              </div>
-          </div>      
+    <div class="herbe" >
+                        <img src="/images/herbe.jpg" class="transparent" style="z-index: 10;" alt="image">
+    </div>
+    <div class="italie" >
+                        <img src="/images/carre6.jpg" class="transparente" style="z-index: 10;" alt="image">
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            {{form_start(form)}}
+            <div class="form-row align-items-end">
+                <div class="col">
+                    {{form_row(form.Prixmax)}}
+                </div>
+                <div class="col">
+                    {{form_row(form.Surfacemin)}}
+                </div>
+                <div class="col">
+                    {{form_row(form.Ville)}}
+                </div>
+                <div class="col">
+                    {{ form_row(form.address, {id: 'search_address'}) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.distance) }}
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <button class="btn btn-primary" style='background-color: #5c4942; border-color: #322;'>Rechercher</button>
+                    </div>
+                </div>
+            </div>
+            {{form_end(form)}}
+        </div>
+    </div>      
     <div class="container mt-4">
-        <h1>Maisons en vente</h1>
+        <h1 style=' margin-left: -2%'>Maisons en vente :</h1>
         <div class="row flex">
             {% for biens in bien%}
                 
@@ -58,4 +71,11 @@
 {% endblock %}
 {% block javascripts %}
     <script src="js/slidephotos.js"></script>
+    
+    {{ encore_entry_script_tags('app') }}
+        <script src="{{ asset('build/app.js') }}"></script>
+        <!-- Renders app.js & a webpack runtime.js file
+                <script src="/build/runtime.js"></script>
+                <script src="/build/app.js"></script> -->
+    
 {% endblock %}

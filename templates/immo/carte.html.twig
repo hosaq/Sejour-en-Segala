@@ -7,19 +7,37 @@
         </h5>
         <p class="chevrondroit" >></p>
         <p class="chevrongauche"><</p>
-        {%for photo in biens.photos %}
-            {%if loop.index <6 %}
-                <div class="col cadre" >
-                    <img src="{{ vich_uploader_asset(photo,'imageFile')}}" class="photocadre" style="z-index: 10;" alt="image">
-                </div>
-    {%endif%}
+        {%if biens.photos |length >3%}
+            {%for photo in biens.photos %}
+                {%if loop.index <7 %}
+                    <div class="col cadre" >
+                        <img src="{{ vich_uploader_asset(photo,'imageFile')}}" class="photocadre" style="z-index: 10;" >
+                    </div>
+                {%endif%}
+
+
             {%endfor%}
-            <div class="rens">
-        <p class="card-text">{{biens.ville}} ( {{biens.codepostal}} )</p>
-        <p class="card-text">{{biens.surface}} m²</p>
-        <p class="card-text" style="font-size:2rem; font-weight: bold">{{biens.prix}} €</p>
-        <p class="card-text" >En vente depuis le : {{biens.date|date('d-m-Y')}} </p>
+        
+        {%else%}
+           
+            {% set images=["carre5.jpg", "carre4.jpg","carre2.jpg","carre3.jpg","carre1.jpg","carre6.jpg"]%}
+            {%for photo in images %}
+                
+                    <div class="col cadre" >
+                        <img src="/images/{{photo}}" class="photocadre" style="z-index: 10;" alt="image">
+                    </div>
+                
+
+
+            {%endfor%}
+         {%endif%}    
+        <div class="rens">
+            <p class="card-text" style="font-size: 1.3rem">{{biens.ville}} ( {{biens.codepostal}} )</p>
+            <p class="card-text">{{biens.surface}} m²</p>
+            <p class="card-text" style="font-size:1rem; font-weight: bold">{{biens.prix}} €</p>
+            <p class="card-text" style="margin-left: 20%;font-size: 0.7em;">En vente depuis le : {{biens.date|date('d-m-Y')}} </p>
         </div>
+        <img src="/images/enluminure2.png" class="enluminure" style="z-index: 10;" alt="image">
     </div>
 </div>
 

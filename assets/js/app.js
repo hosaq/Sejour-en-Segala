@@ -34,4 +34,15 @@ if (inputAddress !== null) {
     document.querySelector('#propriete_lng').value = e.suggestion.latlng.lng;
   });
 }
+
+let searchAddress = document.querySelector('#search_address');
+if (searchAddress !== null) {
+  let place = Places({
+    container: searchAddress
+  });
+  place.on('change', e => {
+    document.querySelector('#lat').value = e.suggestion.latlng.lat;
+    document.querySelector('#lng').value = e.suggestion.latlng.lng;
+    });
+}
 console.log('bonjour Webpack Encore! Editez moi encore dans assets/js/app.js');

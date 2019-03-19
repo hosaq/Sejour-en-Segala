@@ -10,12 +10,79 @@ and open the template in the editor.
 *{
     box-sizing: border-box;
 }
+.btn-primary over{
+    background-color: #4a3932;
+    border-color: #4a3932;
+}
+body{
+    background-color: #2f1f1f;
+}
+.herbe{
+    position: fixed;
+    top:430px;
+    right: 0px;
+    
+}
+.italie{
+    position: absolute;
+    top:199px;
+    left:60px;
+}
+.transparent{
+    opacity: 0.08;
+    height: 1000px;
+    width: 375px;
+}
+.transparente{
+    opacity: 0.80;
+    height: 250px;
+    width: 250px;
+    border-radius: 5% 7% / 1% 20%;
+}
+.container{
+    width: 1200px;
+    max-width: 1200px;
+}
+a{
+    color: #fcf9f9;
+}
+h1{
+    color: #faf0f0;
+    font-size: 2.6rem;
+    font-family: 'ZCOOL XiaoWei', serif;
+    /*font-family: 'Italiana', serif;
+    font-family: 'Tajawal', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Bubbler One', sans-serif;
+   */
+}
+h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    font-style: Italic;
+}
 .carte{
-    border-style:solid; 
-    border-color:#cc2233; 
-    border-width: 1px; 
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #5c4942;
+    border-style: groove;
+    border-color: #4a3932;
+    border-left-width: 13px;
     margin-top: 20px;
     height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 5px;
+    border-radius: 1% 4% 4% 1%;
+    padding: 1.2rem;
+}
+.card-text{
+    font-family: 'Muli', sans-serif;
 }
 .cadre{
     width:100%;
@@ -37,7 +104,7 @@ and open the template in the editor.
 .chevrongauche{
     position: absolute;
     top:200px;
-    left: 40px;
+    left: 50px;
     font-family: 'Raleway', sans-serif;
     font-size: 1.8em;
     color: #fee;
@@ -57,7 +124,16 @@ and open the template in the editor.
 }
 .rens{
     position: absolute;
-    bottom: 5px;
+    bottom: 20px;
+    color:#f4efef;
+    width: 80%;
+}
+.enluminure{
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+    height: 153px;
+    width: 62px;
 }
 .photocadre{
     position: absolute;
@@ -77,4 +153,8 @@ and open the template in the editor.
     margin-bottom: 0;
     margin-top: 0;
     max-height: 0;
+}
+.jumbotron{
+    background-color:    #f2eded;
+
 }
