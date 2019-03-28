@@ -21,38 +21,21 @@ and open the template in the editor.
 body{
     background-color: #2f1f1f;
 }
-.herbe{
-    position: fixed;
-    top:430px;
-    right: 0px;
-    
-}
-.italie{
-    position: absolute;
-    top: 116px;
-    left:60px;
-}
-.transparent{
-    opacity: 0.08;
-    height: 1000px;
-    width: 375px;
-}
-.transparente{
-    opacity: 0.80;
-    height: 250px;
-    width: 250px;
-    border-radius: 5% 7% / 1% 20%;
-}
+
+
+
 .container{
     width: 1200px;
     max-width: 1200px;
+    margin-top: 70px !important;
+    justify-self: center;
 }
 a{
     color: #e5d0d0;
     
 }
 h1{
-    color: #faf0f0;
+    color: #eae0e0;
     font-size: 2.6rem;
     font-family: "Quicksand", 'ZCOOL XiaoWei', sans-serif;
     font-weight: 100;
@@ -68,10 +51,11 @@ h1{
 }
 .medieval{
     font-family: 'cardinal';
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-right: -6px;
-    color: #aa2233;
+    color: #c83648;
     text-transform: capitalize;
+    font-weight: 400;
 }
 h5{
     font-family: "Lato",'cardinal';
@@ -89,14 +73,14 @@ h5{
     border-style: groove;
     border-color: #4a3932;
     border-left-width: 13px;
-    margin-top: 20px;
+    margin-top: 70px;
     height: 550px;
     border-right-width: 0px;
     border-top-width: 0px;
     border-bottom-width: 5px;
     border-radius: 1% 4% 4% 1%;
     padding: 1.2rem;
-    background-image: url("../images/cuir.jpg");
+    background-image: url("../images/cuir1.jpg");
 }
 .card-text{
     font-family: 'Lato', sans-serif;
@@ -111,13 +95,13 @@ h5{
     position: absolute;
     
     height: 239px;
-    top: 114px;
+    top: 164px;
     left: 8.5%;
 
 }
 .chevrondroit{
     position: absolute;
-    top:200px;
+    top:250px;
     right: 40px;
     font-family: 'Raleway', sans-serif;
     font-size: 1.8em;
@@ -128,7 +112,7 @@ h5{
 }
 .chevrongauche{
     position: absolute;
-    top:200px;
+    top:250px;
     left: 50px;
     font-family: 'Raleway', sans-serif;
     font-size: 1.8em;
@@ -179,7 +163,10 @@ h5{
     z-index:1;
     position:absolute;
     overflow: hidden;
-    border-radius: 3%;
+    border-radius: 5%;
+    border-style: groove;
+    border-color: #895038;
+    border-width: 3px;
 }
 .photocadre.hidden{
     padding-bottom: 0;
@@ -187,6 +174,7 @@ h5{
     margin-bottom: 0;
     margin-top: 0;
     max-height: 0;
+    
 }
 .jumbotron{
     background-color:    #f2eded;

@@ -1,0 +1,48 @@
+
+
+
+{{form_start(form)}}
+<div class="row">
+    <div class="col-md-5">{{ form_row(form.nom)}}</div>
+    <div class="col-md-5">{{ form_row(form.type1)}}</div>
+    <div class="col-md-2">{{ form_row(form.type2)}}</div>
+
+</div>
+<div class="row">
+    
+    <div class="col-md-3">{{ form_row(form.lien)}}</div>
+ </div>
+<div class="row">
+    <div class="col-md-8">{{ form_row(form.adresse)}}</div>
+    </div>
+<div class="row">
+    <div class="col-md-2">{{ form_row(form.ville)}}</div>
+    <div class="col-md-2">{{ form_row(form.code_postal)}}</div>
+    <div class="col-md-2">{{ form_row(form.region)}}</div>
+    <div class="col-md-2">{{ form_row(form.pays)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3">{{ form_row(form.lat)}}</div>
+    <div class="col-md-3">{{ form_row(form.lng)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-12">{{form_row(form.presentation)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-12">{{form_row(form.description)}}</div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2">{{form_widget(form)}}</div>
+</div>
+
+
+
+
+
+<div class="text-right">
+    <button class="btn btn-primary" >{{button|default('Enregistrer') }}</button>
+</div>
+{{form_end(form)}}
+

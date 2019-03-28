@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://themes.getmotopress.com/mountainview/wp-content/themes/mountainview/images/bg_image.jpg");
+    background-position: center top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.imageprincipale{
+   
+}
+.ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+}
+
+.lora{
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+}
+
+body, button, input, select, optgroup, textarea {
+    color: #383838;
+    font-family: Lora, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.barre{
+    padding-top: 130px;
+    padding-left: 13px;
+    padding-right: 10px;
+    background-color: #b02233 !important;
+    display: grid;
+    grid-template-columns: 80px; 
+    grid-template-rows: repeat(6, 150px); 
+     opacity: 0.79;
+    
+}
+
+a{
+    text-align: center;
+}
+
+.nav-link {
+   
+    padding:     .1rem .5rem;
+
+}
+.medievalr{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4em;
+    margin-right: -6px;
+    color: #aa2233;
+    text-transform: capitalize;
+}

@@ -84,7 +84,7 @@
                     </div>
                     <h2>{{bien.titre}}</h2>
                     <div class="imagemilieu" >
-                        {%if bien.larges %}
+                        {%if bien.rappelfonds %}
                             <img class="milieu" src="{{vich_uploader_asset(bien, 'rappelfondsFile')}}" >
                         {%else%}
                             <img class="milieu" src="/images/cprincipal.jpg" alt="centrale">
@@ -95,7 +95,7 @@
                     <div style="background-color: #fff;width: 110%;margin-left: -10%;padding: 10%">
                         <div class="mosaique " >
                             <div class="auto imagesmos">
-                                {%if bien.larges %}
+                                {%if bien.regions%}
                                     <img class="auto imagemos" src="{{vich_uploader_asset(bien, 'regionsFile')}}" ><br>
                                 {%else%}
                                     <img class="auto imagemos" src="/images/cregion.jpg" alt="region"><br>
@@ -104,7 +104,7 @@
                                 <a href="#">Région</a>
                             </div>
                             <div class="auto imagesmos">
-                                {%if bien.larges %}
+                                {%if bien.chambres %}
                                     <img class="auto imagemos" src="{{vich_uploader_asset(bien, 'chambresFile')}}" ><br>
                                 {%else%}
                                     <img class="auto imagemos" src="/images/cchambre.jpg" alt="chambre"><br>
@@ -113,7 +113,7 @@
                                 <a href="#">Chambres</a>
                             </div>
                             <div class="auto imagesmos">
-                                {%if bien.larges %}
+                                {%if bien.communs%}
                                     <img class="auto imagemos" src="{{vich_uploader_asset(bien, 'communsFile')}}" ><br>
                                 {%else%}
                                     <img class="auto imagemos" src="/images/ccommuns.jpg" alt="communs"><br>
@@ -128,7 +128,7 @@
                         <p><span class="gros">“ </span>{{bien.description}}<span class="gros"> “</span></p>
                         <p style="font-weight: 600;font-family: Ubuntu, sans-serif;">&mdash; Gilbert Gall</p>
                         <a href="#" class="afte">
-                            {%if bien.larges %}
+                            {%if bien.proprios %}
                                     <img class="ronde" src="{{vich_uploader_asset(bien, 'propriosFile')}}">
                                 {%else%}
                                     <img class="ronde" src="/images/portrait.jpeg" alt="proprietaire">

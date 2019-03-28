@@ -4,7 +4,8 @@ vich_uploader:
     mappings:
         biens_image:
             uri_prefix: /images/immo
-            upload_destination: '%kernel.project_dir%/public/images/immo'          
+            upload_destination: '%kernel.project_dir%/public/images/immo'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
         biens_fonds:
             uri_prefix: /images/fonds
             upload_destination: '%kernel.project_dir%/public/images/fonds'
@@ -37,4 +38,15 @@ vich_uploader:
             uri_prefix: /images/proprios
             upload_destination: '%kernel.project_dir%/public/images/proprios'
             namer: Vich\UploaderBundle\Naming\UniqidNamer            
-    
+        interets_photo1:
+            uri_prefix: /images/interets1
+            upload_destination: '%kernel.project_dir%/public/images/interets1'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        interets_photo2:
+            uri_prefix: /images/interets2
+            upload_destination: '%kernel.project_dir%/public/images/interets2'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        interets_photo3:
+            uri_prefix: /images/interets3
+            upload_destination: '%kernel.project_dir%/public/images/interets3'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

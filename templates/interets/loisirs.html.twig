@@ -1,10 +1,9 @@
-{% extends 'immo/menu.html.twig' %}
+{% extends 'interets/menuloisir.html.twig' %}
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="css/carte.css">
     <link href="https://fonts.googleapis.com/css?family=Italiana|ZCOOL+XiaoWei" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Muli|Quicksand|Raleway|Tajawal" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"> 
 {% endblock %}
     
 {% block contenu %}
@@ -17,21 +16,18 @@
     </div>
 
     <div class="jumbotron">
-        <div class="container">
+        <div class="container" style=' padding-left: 150px;'>
             {{form_start(form)}}
             <div class="form-row align-items-end">
+                
                 <div class="col">
-                    {{form_row(form.Prixmax)}}
+                    {{form_row(form.nom)}}
                 </div>
+                
                 <div class="col">
-                    {{form_row(form.Surfacemin)}}
+                    {{ form_row(form.address, {id: 'cherche_centre'}) }}
                 </div>
-                <div class="col">
-                    {{form_row(form.Ville)}}
-                </div>
-                <div class="col">
-                    {{ form_row(form.address, {id: 'search_address'}) }}
-                </div>
+               
                 <div class="col">
                     {{ form_row(form.distance) }}
                 </div>
@@ -45,18 +41,18 @@
         </div>
     </div>      
     <div class="container mt-4">
-        <h1 style=' margin-left: -2%'>Ventes en pays médiéval :</h1>
+        <h1 style=' margin-left: -2%'>Loisirs, centres d'intérêt, festivals, ... :</h1>
         <div class="row flex">
-            {% for biens in bien%}
+            {% for loisirs in loisir%}
                 
                     <div class="col-md-4">
-                        {%include 'immo/carte.html.twig'%}
+                        {%include 'interets/carteloisir.html.twig'%}
                     </div>
                 
             {%endfor%}
         </div>
         <div class="pagination">
-            {{knp_pagination_render(bien)}}
+            {{knp_pagination_render(loisir)}}
         </div>
         
     </div>

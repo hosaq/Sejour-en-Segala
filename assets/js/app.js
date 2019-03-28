@@ -22,10 +22,10 @@ if(map !== null){
 
 let inputAddress = document.querySelector('#propriete_adresse');
 if (inputAddress !== null) {
-  let place = Places({
+  let place1 = Places({
     container: inputAddress
   });
-  place.on('change', e => {
+  place1.on('change', e => {
     document.querySelector('#propriete_ville').value = e.suggestion.city;
     document.querySelector('#propriete_region').value = e.suggestion.county;
     document.querySelector('#propriete_pays').value = e.suggestion.country;
@@ -37,12 +37,41 @@ if (inputAddress !== null) {
 
 let searchAddress = document.querySelector('#search_address');
 if (searchAddress !== null) {
-  let place = Places({
+  let place2 = Places({
     container: searchAddress
+  });
+  place2.on('change', e => {
+    document.querySelector('#Ville').value = e.suggestion.city;
+    document.querySelector('#lat').value = e.suggestion.latlng.lat;
+    document.querySelector('#lng').value = e.suggestion.latlng.lng;
+    });
+}
+
+let centreAddress = document.querySelector('#interets_adresse');
+if (centreAddress !== null) {
+  let place3 = Places({
+    container: centreAddress
+  });
+  place3.on('change', e => {
+    document.querySelector('#interets_ville').value = e.suggestion.city;
+    document.querySelector('#interets_region').value = e.suggestion.county;
+    document.querySelector('#interets_pays').value = e.suggestion.country;
+    document.querySelector('#interets_code_postal').value = e.suggestion.postcode;
+    document.querySelector('#interets_lat').value = e.suggestion.latlng.lat;
+    document.querySelector('#interets_lng').value = e.suggestion.latlng.lng;
+  });
+}
+
+
+let chercheAddress = document.querySelector('#cherche_centre');
+if (chercheAddress !== null) {
+  let place = Places({
+    container: chercheAddress
   });
   place.on('change', e => {
     document.querySelector('#lat').value = e.suggestion.latlng.lat;
     document.querySelector('#lng').value = e.suggestion.latlng.lng;
     });
 }
+
 console.log('bonjour Webpack Encore! Editez moi encore dans assets/js/app.js');

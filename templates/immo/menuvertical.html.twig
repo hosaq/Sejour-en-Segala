@@ -1,0 +1,40 @@
+
+{% block stylesheets %}
+
+
+
+{% endblock %}
+{% block barre %}
+    <div class="barre ">
+         <div class="element">
+            <a class="nav-link" style="color: #fcecec !important;" href="{{path('home')}}">
+                Accueil</a>
+        </div>
+
+        <div class="element">
+            <a class="nav-link" style="color: #fcecec !important;" href="{{path('acheter')}}">
+                 Acheter</a>
+        </div>
+
+        <div class="element">
+            <a class="nav-link" style="color: #fcecec !important;" href="{{path('admin')}}">
+                Vendre</a>
+        </div>
+
+        <div class="element">
+            <a class="nav-link disabled" style="color: #fcecec !important;" href="#">
+                Louer</a>
+        </div>
+
+        <div class="element">
+            <a class="nav-link disabled" style="color: #fcecec !important;" href="#">
+                Mettre en location</a>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

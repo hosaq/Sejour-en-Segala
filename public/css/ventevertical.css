@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: none!important;
+    background-position: center top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    
+}
+
+.parent{
+    display: grid;
+    grid-template-columns: 120px 220px 1200px;
+    grid-template-areas: "barre jumbotron container";
+    grid-gap:90px ;   
+}
+
+.jumbotron {
+    background-color: #392626;
+    margin-top: 300px;
+    
+    height: 900px;
+    justify-self: center;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+         
+}
+.formulaire{
+    display: grid;
+    grid-template-columns: 200px; 
+    grid-template-rows: repeat(6, 120px); 
+    
+     
+}
+.herbe{
+    position: fixed;
+    top: -66px;
+    right: -143px;
+    
+}
+.transparent{
+    opacity: 0.03;
+    height: 1000px;
+    width: 375px;
+}
+.italie{
+    position: absolute;
+    top: 37px;
+    left: 208px;
+    
+}
+.transparente{
+    opacity: 0.90;
+    height: 109px;
+    width: 222px;
+    border-radius: 5% 7% / 1% 20%;
+}
+.col{
+    justify-self: center;
+}
+.form-contro{
+    background-color: #f2eded;
+}

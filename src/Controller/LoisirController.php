@@ -1,19 +1,19 @@
 <?php
 namespace App\Controller;
 
-use App\Entity\Immo; 
-use App\Form\BienRechercheType;
-use App\Entity\BienRecherche;
-use App\Repository\ImmoRepository;
+use App\Entity\Interets; 
+use App\Form\InteretsRechercheType;
+use App\Entity\InteretsRecherche;
+use App\Repository\InteretsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Common\Persistence\ObjectManager;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-class VenteController extends AbstractController
+class LoisirController extends AbstractController
 {
     /**
-     * @var ImmoRepository
+     * @var InteretsRepository
      */
     private $rep;
     
@@ -22,26 +22,26 @@ class VenteController extends AbstractController
      */
     private $em;
     
-    public function __construct(ImmoRepository $rep,ObjectManager $em) 
+    public function __construct(InteretsRepository $rep,ObjectManager $em) 
     {
         $this->repository=$rep;
         $this->em=$em;
     }
 
-    public function ventes(PaginatorInterface $paginator,Request $request)
+    public function loisirs(PaginatorInterface $paginator,Request $request)
     { 
-        $recherche=new BienRecherche();
-        $form= $this->createForm(BienRechercheType::class, $recherche);
+        $recherche=new InteretsRecherche();
+        $form= $this->createForm(InteretsRechercheType::class, $recherche);
         $form->handleRequest($request);
         
-        $bien=$paginator->paginate(
+        $loisir=$paginator->paginate(
                 $this->repository->findAllVisibleQuery($recherche),
                 $request->query->getInt('page', 1),
                 12
         
         );
-        return $this->render('immo/ventevertical.html.twig',[
-            'bien'=>$bien,
+        return $this->render('interets/loisirs.html.twig',[
+            'loisir'=>$loisir,
             'form'=>$form->createView()
             ]);
     }
@@ -50,10 +50,10 @@ class VenteController extends AbstractController
     
     public function voir($slug,$id)
     {
-        $bien=$this->repository->find($id);
+        $loisir=$this->repository->find($id);
         #dump($bien);
-        return $this->render('immo/bien.html.twig',[
-            'bien'=>$bien
+        return $this->render('interets/loisir.html.twig',[
+            'loisir'=>$loisir
         ]);
     }
     

@@ -43,4 +43,29 @@ logout:
 supprimerphoto:
      path: /admin/supprimerphoto/{id}
      controller: App\Controller\Admin\AdminPhotosController::supprimephoto
+
+admininterets:
+     path: /admininterets/gerer/
+     controller: App\Controller\Admin\AdminInteretsController::index
      
+admininteret:
+     path: /admininterets/gerer/{id}
+     controller: App\Controller\Admin\AdminInteretsController::edit
+     
+adminnouvelinteret:
+     path: /admininterets/nouvel/
+     controller: App\Controller\Admin\AdminInteretsController::nouvel
+     
+supprimerinteret:
+     path: /admininterets/supprimer/{id}
+     controller: App\Controller\Admin\AdminInteretsController::supprime
+
+loisirs:
+    path: /loisirs
+    controller: App\Controller\LoisirController::loisirs    
+     
+loisir:
+     path: /loisirs/{slug}-{id}
+     controller: App\Controller\LoisirController::voir
+     requirements:
+         slug: '[a-z0-9\-]*'     

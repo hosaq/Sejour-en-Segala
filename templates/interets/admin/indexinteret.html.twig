@@ -14,7 +14,7 @@
         <a class="nav-link" style="color: #eae9e8 !important;" href="{{path('acheter')}}">Acheter <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #eae9e8 !important;" href="#">Vendre</a>
+        <a class="nav-link" style="color: #eae9e8 !important;" href="{{path('admin')}}">Vendre</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" style="color: #eae9e8 !important;" href="#">Louer</a>
@@ -31,22 +31,40 @@
 </nav>
 
 <div class="container mt-4">
-    <h1>Créer un nouveau bien</h1>
-    {{ include('immo/admin/formulairebien.html.twig',{form:form, button: 'Créer'}) }}
+    <h1>Gérer les centres d'intérêt</h1>
+    <table class  ="table table-striped">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for interet in interets%}
+                <tr>
+                    <td>{{interet.nom}}</td>
+                    <td>
+                        <a href="{{path('admininteret',{id: interet.id})}}" class="btn btn-secondary">Editer</a>
+                    </td>
+                    <td>
+                        <form method="post" action="{{path('supprimerinteret',{id: interet.id})}}"
+                              onsubmit="return confirm('Supprimer ce sujet ? ' ) ;">
+                            <input type="hidden"  name="_method" value="DELETE">
+                            <input type="hidden"  name="_token"  value="{{csrf_token('delete'~interet.id)}}">
+                            <button class="btn btn-danger" style="margin-top: 0%">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+        <div class="text-right">
+            <a href="{{ path('adminnouvelinteret') }}" class="btn btn-primary">Nouveau centre</a>
+        </div>
 </div>
-        
+            
 
 
 
 
-{% endblock %}
-{% block javascripts %}
-    
-    {{ encore_entry_script_tags('app') }}
-        <script src="{{ asset('build/app.js') }}"></script>
-        <!-- Renders app.js & a webpack runtime.js file
-                <script src="/build/runtime.js"></script>
-                <script src="/build/app.js"></script> -->
-    <script src="../../js/suppr.js"></script>
-    
 {% endblock %}

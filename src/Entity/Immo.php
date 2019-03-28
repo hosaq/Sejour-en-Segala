@@ -36,7 +36,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_fonds", fileNameProperty="fond")
      */
     private $fondFile;
@@ -49,7 +49,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_logos", fileNameProperty="logos")
      */
     private $logosFile;
@@ -62,7 +62,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_regions", fileNameProperty="regions")
      */
     private $regionsFile;
@@ -75,7 +75,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_rappelfonds", fileNameProperty="rappelfonds")
      */
     private $rappelfondsFile;
@@ -88,7 +88,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_larges", fileNameProperty="larges")
      */
     private $largesFile;
@@ -101,7 +101,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_chambres", fileNameProperty="chambres")
      */
     private $chambresFile;
@@ -114,7 +114,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_communs", fileNameProperty="communs")
      */
     private $communsFile;
@@ -127,7 +127,7 @@ class Immo
 
     /**
      * @var File|null
-     * @Assert\Image( mimeTypes="image/jpeg")
+     * @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * @Vich\UploadableField(mapping="biens_proprios", fileNameProperty="proprios")
      */
     private $propriosFile;
@@ -204,7 +204,7 @@ class Immo
     
     /**
      * @Assert\All({
-     *     @Assert\Image(mimeTypes="image/jpeg")
+     *     @Assert\Image( mimeTypes={"image/png", "image/jpeg", "image/jpg", "image/svg+xml", "image/gif"})
      * })
      */
     private $photoFiles;
