@@ -1,0 +1,746 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: Cardinal;
+  src: url('../Cardinal.ttf');
+}
+.btn-primary over{
+    background-color: #4a3932;
+    border-color: #4a3932;
+}
+body{
+    background-color: #2f1f1f;
+}
+
+.fermeture0{
+    display: none;
+}
+.fermeture2{
+    display: none;
+}
+.fermeture3{
+    display: none;
+}
+.fermeture4{
+    display: none;
+}
+.fermeture1{
+    position: absolute;
+    top: 298px;
+    right: 8px;
+    width: 28px;
+}
+
+a{
+    color: #e5d0d0;
+    
+}
+.lien0{
+    font-family: 'BergamoStd-Regular',sans- serif;
+    color: #251010;
+    font-size: 1.3rem;
+}
+.lien1{
+    font-family: 'EB Garamond', serif;
+    color: #eae0e0;
+}
+.lien2{
+    font-family: 'EB Garamond', serif;
+    color: #251010;
+}
+.lien3{
+    font-family: 'LiberationSerif-Regular', serif;
+    color: #eae0e0;
+     font-size: 1.3rem;
+}
+.lien4{
+     font-family: 'EB Garamond', serif;
+    color: #322;
+     font-size: 1.3rem;
+}
+h1{
+    color: #eae0e0;
+    font-size: 2.6rem;
+    font-family: "Quicksand", 'ZCOOL XiaoWei', sans-serif;
+    font-weight: 100;
+    /*font-family: 'Italiana', serif;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-family: 'Tajawal', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Bubbler One', sans-serif;
+    font-family: 'Lato', sans-serif;
+   */
+}
+.medieval0{
+    font-family: 'BergamoStd-Regular',serif;
+    font-size: 1.4em;
+    margin-right: -6px;
+    color: #8785d8;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.medieval2{
+    font-family: 'EB Garamond',serif;
+    font-size: 1.6em;
+    margin-right: -6px;
+    color: #c83648;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.medieval1{
+    font-family: 'cardinal';
+    font-size: 1.6em;
+    margin-right: -6px;
+    color: #c83648;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.medieval3{
+    font-family: 'LiberationSerif-Italic',serif;
+    font-size: 1.6em;
+    margin-right: -6px;
+    color: #ef3e34;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.medieval4{
+   font-family: 'EB Garamond',serif;
+    font-size: 1.4em;
+    margin-right: -6px;
+    color: #dd133c;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+h5{
+    font-family: "Lato",'cardinal';
+    font-size: 1.5em;
+    font-weight: 400;
+    text-indent: -0.5em;
+    color: #e5d0d0;
+}
+.carte0{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #e3cda4;;
+    border-style: groove;
+    border-color: #fff8ec;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-radius: 0% 0% 0% 0%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    background-image:url("../images/minuit.jpg");
+
+}
+.carte1{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #5c4942;
+    border-style: groove;
+    border-color: #4a3932;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 5px;
+    border-radius: 1% 4% 4% 1%;
+    padding: 1.2rem;
+    background-image: url("../images/cuir1.jpg");
+}
+.carte2{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #e3cda4;
+    border-style: groove;
+    border-color: #e6cb9b;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-radius: 0% 0% 0% 0%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    background-image:url("../images/nrf2.jpg");
+
+}
+.carte3{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #e3cda4;
+    border-style: groove;
+    border-color: #1d1b19;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-radius: 0% 0% 0% 0%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    background-image:url("../images/actesud.jpg");
+
+}
+.carte4{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #fff7f7;
+    margin-top: 0px;
+    height: 720px;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+
+}
+.card-text0{
+    font-family: 'BergamoStd-Regular',sans- serif;
+    font-weight: 400;
+    color: #251010;
+    font-size: 0.7rem;
+}
+.card-text2{
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    color: #251010;
+    
+}
+.card-text1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #e5d0d0;
+    
+}
+.card-text3{
+    font-family: 'LiberationSerif-Regular', serif;
+    font-weight: 400;
+    color: #e5d0d0;
+    
+}
+.card-text4{
+    font-family: 'BergamoStd-Regular',sans- serif;
+    font-weight: 400;
+    color: #251010;
+    font-size: 0.7rem;
+}
+.cadre0{
+    width: 84%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    
+    height: 239px;
+    top: 168px;
+    left: 9%;
+    opacity: 0.83
+
+}
+.cadre2{
+    width: 73%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 239px;
+    top: 180px;
+    left: 15%;
+    opacity: 0.75;
+
+}
+.cadre1{
+    width: 74%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 231px;
+    top: 173px;
+    left: 12.5%;
+
+}
+.cadre3{
+    width: 86%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 239px;
+    bottom: 56px;
+    left: 18.9%;
+
+}
+.cadre4{
+    width: 48%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 270px;
+    top: 25px;
+    right: 3%;
+    opacity: 1.03;
+
+}
+.chevrondroit0{
+    position: absolute;
+    top:250px;
+    right: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche0{
+    position: absolute;
+    top:250px;
+    left: 61px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit1{
+    position: absolute;
+    top:250px;
+    right: 67px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche1{
+    position: absolute;
+    top:250px;
+    left: 71px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit2{
+    position: absolute;
+    top:250px;
+    right: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche2{
+    position: absolute;
+    top:250px;
+    left: 76px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit3{
+    position: absolute;
+    bottom: 139px;
+    right: 77px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche3{
+    position: absolute;
+    bottom: 139px;
+    left: 93px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit4{
+    position: absolute;
+    top:140px;
+    right: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche4{
+    position: absolute;
+    top:140px;
+    left: 408px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+
+.chevrondroit0:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche0:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit1:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche1:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit2:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche2:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit3:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche3:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit4:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche4:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.rens0{
+    position: absolute;
+    bottom: 70px;
+    color: #f4efef;
+    width: 80%;
+    right: -4%;
+}
+.rens1{
+    position: absolute;
+    bottom: 70px;
+    color: #f4efef;
+    width: 80%;
+    right: -4%;
+}
+.rens2{
+    position: absolute;
+    bottom: 70px;
+    color: #f4efef;
+    width: 80%;
+    right: -4%;
+}
+.rens3{
+    position: absolute;
+    top: 181px;
+    left: 8%;
+    color: #f4efef;
+    width: 80%;
+    text-align: right;
+
+}
+.rens4{
+    position: absolute;
+    top: 13%;
+    color: #332222;
+    width: 45%;
+    left: 5.2%;
+    max-height: 61%;
+    overflow: hidden;
+    
+}
+.date0{
+    position: absolute;
+    bottom:2px;
+    
+    width: 80%;
+    right: -10%;
+}
+.date1{
+    position: absolute;
+    bottom:18px;
+    
+    width: 80%;
+    right: -12%;
+}
+.date2{
+    position: absolute;
+    bottom: 10px;
+    
+    width: 80%;
+    right: -16%;
+}
+.date3{
+    position: absolute;
+    bottom: 10px;
+    
+    width: 80%;
+    right: -9%;
+}
+.date4{
+    position: absolute;
+    bottom:2px;
+    
+    width: 45%;
+    left: 14%;
+}
+.enluminure0{
+    display: none;
+}
+.enluminure2{
+    display: none;
+}
+.enluminure3{
+    display: none;
+}
+.enluminure1{
+    position: absolute;
+    bottom: 8px;
+    left: 41px;
+    height: 190px;
+    width: 50px;
+}
+.enluminure4{
+    position: absolute;
+    bottom: 0px;
+    left: 48.3%;
+    height:720px;
+    width: 20px;
+    opacity: 0.2;
+}
+.liseret{
+    width: 20px;
+    left: 49px;
+    opacity: 0.65;
+}
+.photocadre1{
+    width: 91%;
+    height: 210px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 18% 25%;
+    border-style: groove;
+    border-color: #8f5b3b;
+    border-width: 4px;
+}
+.photocadre0{
+    width: 91%;
+    height: 228px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 3%;
+    border-style: groove;
+    border-color: #e3cda4;
+    border-width: 1px;
+}
+.photocadre2{
+    width: 89%;
+    height: 205px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 3%;
+    border-style: groove;
+    border-color: #e3cda4;
+    border-width: 1px;
+}
+.photocadre3{
+    width: 67%;
+    height: 228px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    border-style: groove;
+    border-color: #e3cda4;
+    border-width: 1px;
+}
+.photocadre4{
+    width: 94%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+}
+.photocadre.hidden{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-height: 0;
+    
+}
+.jumbotron{
+    background-color:    #f2eded;
+
+}
+.ville0{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.ville2{
+    font-size: 1.3rem;
+}
+.ville1{
+    font-size: 1.3rem;
+}
+.ville3{
+    font-size: 1rem;
+}
+.ville4{
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin-left: -2%;
+}
+.prix0{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.prix2{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.prix1{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.prix3{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.prix4{
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin-left: 3%;
+}
+.description{
+    font-size: 0.86rem;
+    font-weight: 200;
+    color: #211;
+    text-align: justify;
+    padding-right:4%;
+    padding-left: 3%;
+    text-indent: 1.9em;
+    line-height: 1.35rem;
+    margin-top: 8%;
+    background-color: #faf1f4;
+    margin-right: 8%;
+}
+.chambre4{
+       height: 26%;
+width: 16%;
+position: absolute;
+bottom: 13%;
+right: 7%;
+z-index: 11;
+}
+.region4{
+    height: 26%;
+width: 16%;
+position: absolute;
+bottom: 13%;
+right: 29%;
+z-index: 11;
+}
+.ichambre4{
+   height: 100%;
+width: 100%;
+
+}
+.iregion4{
+    height: 100%;
+width: 100%;
+
+}
+.trait{
+    width: 38%;
+    height: 1px;
+    color: #ffa808;
+    background-color: #ffa808;
+    border: 0;
+    position: absolute;
+    top: 70%;
+    left: 7%;
+
+}
+.orange{
+    position: absolute;
+    bottom: 12%;
+    right: 32%;
+    opacity: 0.9;   
+}
+.orangec{
+    position: absolute;
+    bottom: 12%;
+    right: 10%;
+    opacity: 0.9;   
+}
+.card-title{
+    margin-bottom: .4rem;
+}

@@ -85,7 +85,7 @@ h5{
     border-style:groove; 
     border-color:#4a4432;
     border-left-width: 10px;*/
-    background-color: #5c4942;
+    background-color: #36312e;
     border-style: groove;
     border-color: #4a3932;
     border-left-width: 13px;
@@ -96,7 +96,7 @@ h5{
     border-bottom-width: 5px;
     border-radius: 1% 4% 4% 1%;
     padding: 1.2rem;
-    background-image: url("../images/cuir.jpg");
+    background-image: url("../images/outre.jpg");
 }
 .card-text{
     font-family: 'Lato', sans-serif;
@@ -190,5 +190,6 @@ h5{
 }
 .jumbotron{
     background-color:    #f2eded;
+    padding: 3rem 2rem;
 
 }

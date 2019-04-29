@@ -243,11 +243,17 @@ class Immo
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $region;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Interets", inversedBy="immos")
+     */
+    private $centreinterets;
     
     public function  __construct()
     {
         $this->date=new \DateTime();
         $this->photos = new ArrayCollection();
+        $this->centreinterets = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -810,6 +816,32 @@ class Immo
     public function setRegion(?string $region): self
     {
         $this->region = $region;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Interets[]
+     */
+    public function getCentreinterets(): Collection
+    {
+        return $this->centreinterets;
+    }
+
+    public function addCentreinteret(Interets $centreinteret): self
+    {
+        if (!$this->centreinterets->contains($centreinteret)) {
+            $this->centreinterets[] = $centreinteret;
+        }
+
+        return $this;
+    }
+
+    public function removeCentreinteret(Interets $centreinteret): self
+    {
+        if ($this->centreinterets->contains($centreinteret)) {
+            $this->centreinterets->removeElement($centreinteret);
+        }
 
         return $this;
     }

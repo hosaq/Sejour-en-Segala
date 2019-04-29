@@ -7,28 +7,29 @@
 {% block barre %}
     <div class="barre ">
          <div class="element">
-            <a class="nav-link" style="color: #fcecec !important;" href="{{path('home')}}">
-                Accueil</a>
+            <a class="nav-link" style="color: #fcecec !important;" href="{{path('acheter')}}">
+                Louer</a>
+                <hr>
         </div>
 
         <div class="element">
             <a class="nav-link" style="color: #fcecec !important;" href="{{path('acheter')}}">
-                 Acheter</a>
+                 Acheter</a><hr>
         </div>
 
         <div class="element">
             <a class="nav-link" style="color: #fcecec !important;" href="{{path('admin')}}">
-                Vendre</a>
+                Administrer</a><hr>
         </div>
 
         <div class="element">
-            <a class="nav-link disabled" style="color: #fcecec !important;" href="#">
-                Louer</a>
+            <a class="nav-link disabled" style="color: #fcecec !important;" href="{{path('loisirs')}}">
+                Loisirs</a><hr>
         </div>
 
         <div class="element">
-            <a class="nav-link disabled" style="color: #fcecec !important;" href="#">
-                Mettre en location</a>
+            <a class="nav-link disabled" style="color: #fcecec !important;" href="{{path('admininterets')}}">
+                Administrer loisirs</a>
 
         </div>
     </div>

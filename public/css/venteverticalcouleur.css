@@ -1,0 +1,93 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: none!important;
+    background-position: center top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: #b02233 !important;
+    
+}
+hr{
+    border: 1px solid #fdd;
+    width:40%;
+    margin-top: 3rem;
+    margin-right: -20%;
+}
+    
+
+.parent{
+    display: grid;
+    grid-template-columns:  220px 1410px;
+    grid-template-areas: "jumbotron container";
+    grid-gap:60px ;   
+}
+
+.jumbotron {
+    background-color: #b9223a;
+    margin-top: 160px;
+    margin-left: 10%;
+    height: 790px;
+    justify-self: center;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7% 15% / 10% 20%;
+    border-style: solid;
+    border-color: #b01030;
+    border-width: 1px;
+         
+}
+.formulaire{
+    display: grid;
+    grid-template-columns: 200px; 
+    grid-template-rows: repeat(6, 120px); 
+    
+     
+}
+.herbe{
+    position: fixed;
+    top: -66px;
+    right: -143px;
+    
+}
+.transparent{
+    opacity: 0.05;
+    height: 1000px;
+    width: 375px;
+}
+.italie{
+    position: absolute;
+    top: 37px;
+    left: 208px;
+    
+}
+.transparente{
+    opacity: 0.90;
+    height: 109px;
+    width: 222px;
+    border-radius: 5% 7% / 1% 20%;
+}
+.col{
+    justify-self: center;
+}
+.form-contro{
+    background-color: #f2eded;
+}
+
+.pagination{
+    margin-top: 40px;
+    padding-left: 22%;
+}

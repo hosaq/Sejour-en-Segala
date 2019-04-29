@@ -41,7 +41,10 @@ if (searchAddress !== null) {
     container: searchAddress
   });
   place2.on('change', e => {
-    document.querySelector('#Ville').value = e.suggestion.city;
+      
+    
+      
+    
     document.querySelector('#lat').value = e.suggestion.latlng.lat;
     document.querySelector('#lng').value = e.suggestion.latlng.lng;
     });

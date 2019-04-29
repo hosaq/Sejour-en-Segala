@@ -1,0 +1,60 @@
+
+{#{%set l=random(3,3)%}#}
+{%set l=4 %}
+<div class="card-mb-3">
+    <div class="card-body carte{{ l }}" style=" ">
+        <img src="/images/enluminure3.png" class="enluminure{{ l }}" style="z-index: 10;" alt="image">
+        
+        <p class="chevrondroit{{ l }}" >></p>
+        <p class="chevrongauche{{ l }}"><</p>
+        
+        {%if biens.photos |length >3%}
+         <div class="col cadre{{ l }}" >
+            {%for photo in biens.photos %}
+                {%if loop.index <7 %}
+                    
+                        <img src="{{ vich_uploader_asset(photo,'imageFile')}}" class="photocadre{{ l }}" style="z-index: 10;" >
+                    
+                {%endif%}
+
+
+            {%endfor%}
+        </div>
+        {%else%}
+           
+            {% set images=["carre5.jpg", "carre4.jpg","carre2.jpg","carre3.jpg","carre1.jpg","carre6.jpg"]%}
+            {%for photo in images %}
+                
+                    <div class="col cadre{{ l }}" >
+                        <img src="/images/{{photo}}" class="photocadre{{ l }}" style="z-index: 10;" alt="image">
+                    </div>
+                
+
+
+            {%endfor%}
+         {%endif%}    
+        <div class="rens{{ l }}">
+            <h5 class="card-title">
+            <a href="{{path('bien',{id:biens.id,slug:biens.slug})}}" class='lien{{ l }}'><span class='medieval{{ l }}'>{{biens.titre[:1]}}</span>
+                {{biens.titre[1:]}}</a>
+        </h5>
+            <p class="card-text{{ l }} ville{{ l }}" style="">{{biens.ville}} ( {{biens.codepostal}} )</p>
+            <p class="card-text{{ l }} prix{{ l }}">{{biens.surface}} m²</p>
+            <p class="card-text{{ l }} prix{{ l }}" style="">{{biens.prix}} €</p>
+            
+        </div>
+        <div class="date">
+            <p class="card-text{{ l }} date{{ l }}" style="font-size: 0.7em;">En vente depuis le : {{biens.date|date('d-m-Y')}} </p>
+        </div>
+        
+    </div>
+</div>
+
+  
+          
+
+
+
+
+
+

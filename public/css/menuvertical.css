@@ -42,14 +42,16 @@ body, button, input, select, optgroup, textarea {
 
 .barre{
     padding-top: 130px;
-    padding-left: 13px;
+    padding-left: 5px;
     padding-right: 10px;
-    background-color: #b02233 !important;
+    background-color: #b9223a !important;
     display: grid;
     grid-template-columns: 80px; 
     grid-template-rows: repeat(6, 150px); 
-     opacity: 0.79;
-    
+    opacity: 0.79;
+    border-style: solid;
+    border-color: #b01030;
+    border-width: 1px;
 }
 
 a{
@@ -58,7 +60,7 @@ a{
 
 .nav-link {
    
-    padding:     .1rem .5rem;
+    padding: .4rem .19rem;
 
 }
 .medievalr{

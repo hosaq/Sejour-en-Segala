@@ -33,16 +33,8 @@ class InteretsType extends AbstractType
             ])
             ->add('type2', ChoiceType::class, [
                 'label' =>'Type2',
-                'required' => false,
-                'choices' => [
-                    ''=>'',
-                    ''=>'',
-                    ''=>'',
-                    ''=>'',
-                    ''=>'',
-                    ''=>'',
-                    ''=>''
-                    ]
+                'required' => false
+                
                 ])
             ->add('presentation')
             ->add('description')

@@ -213,7 +213,8 @@
                     <h3>Galerie</h3>
                     <section class="galerie">
                         {%if bien.photos|length > 4%}
-                                    <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[0], 'imageFile')}}" >
+                            
+                        <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[0], 'imageFile')}}" >
                         <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[1], 'imageFile')}}" >
                         <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[2], 'imageFile')}}" >
                         <img class="auto imagemo" src="{{vich_uploader_asset(bien.photos[3], 'imageFile')}}" >
@@ -235,10 +236,32 @@
                     </div>    
                     <h3 style="margin-bottom: 20px;">Prochains événements :</h3>
                     <section class="">
-                        <a href="#" class="lien">&Eacute;vénement musique</a><br>
+                        
+                           {%if bien.centreinterets| length >1 %}
+                        <a href="../loisirs/{{bien.centreinterets[1].slug}}-{{bien.centreinterets[1].id}}" class="lien">&Eacute;vénement musique</a><br>
+                        {%else%}
+                            <a href="#" class="lien">&Eacute;vénement musique</a><br>
+                           {%endif%}  
+                        {%if bien.centreinterets |length >2 %}
+                         <a href="../loisirs/{{bien.centreinterets[2].slug}}-{{bien.centreinterets[2].id}}" class="lien">&Eacute;vénement festif</a><br>   
+                        
+                        {%else%}
                         <a href="#" class="lien">&Eacute;vénement festif</a><br>
+                         {%endif%}
+                         {%if bien.centreinterets |length >0 %}
+                        <a href="../loisirs/{{bien.centreinterets[0].slug}}-{{bien.centreinterets[0].id}}" class="lien">&Eacute;vénement arts</a><br>
+                        {%else%}
+                            
                         <a href="#" class="lien">&Eacute;vénement arts</a><br>
+                        
+                        
+                         {%endif%}
+                         {%if bien.centreinterets |length >3 %}
+                         <a href="../loisirs/{{bien.centreinterets[3].slug}}-{{bien.centreinterets[3].id}}" class="lien">&Eacute;vénement festif</a><br>   
+                        
+                        {%else%}
                         <a href="#" class="lien">&Eacute;vénement foire</a><br>
+                        {%endif%}
                         <a href="#" class="lien">&Eacute;vénement sportif</a><br>
 
 

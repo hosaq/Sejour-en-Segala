@@ -5,9 +5,9 @@
  */
 
 class Animation {
-    static slideUp(element) {
+    static slideUp(element,c) {
         let nombrePhotos = 0;
-        let photos = element.querySelectorAll('.photocadre');
+        let photos = element.querySelectorAll('.photocadre'+c);
         nombrePhotos = photos.length;
         console.log(nombrePhotos);
         let n = nombrePhotos - 1;
@@ -25,9 +25,9 @@ class Animation {
             }
         }
     }
-    static slideDown(element) {
+    static slideDown(element,c) {
         let nombrePhotos = 0;
-        let photos = element.querySelectorAll('.photocadre');
+        let photos = element.querySelectorAll('.photocadre'+c);
         nombrePhotos = photos.length;
         let n = 0;
         console.log(n);
@@ -48,13 +48,17 @@ class Animation {
         }
     }
 }
-
-const carts = document.querySelectorAll(".carte");
+for(let k=0;k<4;k++){
+const carts = document.querySelectorAll(".carte"+k);
 carts.forEach(cart => {
-    cart.querySelector(".chevrondroit").addEventListener("click", function () {
-        Animation.slideUp(cart);
+    console.log(k);
+    let chevrondroit = cart.querySelector(".chevrondroit"+k);
+    let chevrongauche = cart.querySelector(".chevrongauche"+k);
+    chevrondroit.addEventListener("click", function () {
+        Animation.slideUp(cart,k);
     });
-    cart.querySelector(".chevrongauche").addEventListener("click", function () {
-        Animation.slideDown(cart);
-    });   
+    chevrongauche.addEventListener("click", function () {
+        Animation.slideDown(cart,k);
+    });
 });
+}

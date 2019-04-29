@@ -3,12 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Immo;
+use App\Entity\Interets;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class ProprieteType extends AbstractType
 {
@@ -34,6 +36,10 @@ class ProprieteType extends AbstractType
                       'choices' => array('En vente' => 'En vente', 'Vendu' =>'Vendu', 
                       'Sous compromis' =>'Sous compromis'),'label'=>'Statut',
                       ))
+            ->add('centreinterets',EntityType::class,['class'=>Interets::class,
+                'choice_label'=>'nom',
+                'multiple'=>true
+                ])    
             ->add('fondFile', FileType::class, [
                 'required' => false
             ])

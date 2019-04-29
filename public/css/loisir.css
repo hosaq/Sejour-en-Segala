@@ -90,10 +90,10 @@ p{
 }
 .gauche{
     grid-area:photo;
-    justify-self: center;
-    
-    
-    
+    justify-self: center;  
+}
+.jumbotron{
+    padding: 3rem 2rem;
 }
 .droit{
     grid-area:commentaire;
@@ -131,6 +131,7 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }
 .villes{
      background-color:#1a8bf9;
@@ -138,6 +139,7 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }
 .paysages{
      background-color:#dd133c;
@@ -145,6 +147,7 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }
 .festivals{
     background-color: #dd133c;
@@ -152,6 +155,7 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }
 .nourritures{
      background-color:#807e7e;
@@ -159,6 +163,7 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }
 .sportives{
      background-color:#ffa808;
@@ -166,6 +171,7 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }
 .autres{
      background-color:#807e7e;
@@ -173,4 +179,5 @@ a{
     align-self: center;
     padding: 10px;
     color: #fff;
+    text-align: center;
 }

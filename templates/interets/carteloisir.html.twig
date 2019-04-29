@@ -1,7 +1,7 @@
 
 
 <div class="card-mb-4">
-    <div class="card-body carte" style='background-image: url("../images/outre.jpg");border-color: #222'>
+    <div class="card-body carte" style=''>
         <h5 class="card-title">
             <a href="{{path('loisir',{id:loisirs.id,slug:loisirs.slug})}}">{{loisirs.nom}}</a>
         </h5>
@@ -25,7 +25,7 @@
         <div class="rens">
             <p class="card-text" style="font-size: 1.3rem">{{loisirs.ville}} ( {{loisirs.codepostal}} )</p>
             <p class="card-text">{{loisirs.type1}} </p>
-            <p class="card-text" style="font-size:1rem; font-weight: bold">{{loisirs.lien}} €</p>
+            <a href ="https://{{loisirs.lien}}" target="_blank" class="card-text" style="font-size:1rem; font-weight: bold">{{loisirs.lien}} </p>
             
         </div>
         <img src="/images/liseret.jpg" class="enluminure liseret" style="z-index: 10;" alt="image">

@@ -22,8 +22,21 @@ body{
     background-color: #2f1f1f;
 }
 
-
-
+.fermeture0{
+    display: none;
+}
+.fermeture2{
+    display: none;
+}
+.fermeture3{
+    display: none;
+}
+.fermeture1{
+    position: absolute;
+    top: 298px;
+    right: 8px;
+    width: 28px;
+}
 .container{
     width: 1200px;
     max-width: 1200px;
@@ -33,6 +46,24 @@ body{
 a{
     color: #e5d0d0;
     
+}
+.lien0{
+    font-family: 'BergamoStd-Regular',sans- serif;
+    color: #251010;
+    font-size: 1.3rem;
+}
+.lien1{
+    font-family: 'EB Garamond', serif;
+    color: #eae0e0;
+}
+.lien2{
+    font-family: 'EB Garamond', serif;
+    color: #251010;
+}
+.lien3{
+    font-family: 'LiberationSerif-Regular', serif;
+    color: #eae0e0;
+     font-size: 1.3rem;
 }
 h1{
     color: #eae0e0;
@@ -49,7 +80,23 @@ h1{
     font-family: 'Lato', sans-serif;
    */
 }
-.medieval{
+.medieval0{
+    font-family: 'BergamoStd-Regular',serif;
+    font-size: 1.4em;
+    margin-right: -6px;
+    color: #8785d8;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.medieval2{
+    font-family: 'EB Garamond',serif;
+    font-size: 1.6em;
+    margin-right: -6px;
+    color: #c83648;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.medieval1{
     font-family: 'cardinal';
     font-size: 1.6em;
     margin-right: -6px;
@@ -57,14 +104,44 @@ h1{
     text-transform: capitalize;
     font-weight: 400;
 }
+.medieval3{
+    font-family: 'LiberationSerif-Italic',serif;
+    font-size: 1.6em;
+    margin-right: -6px;
+    color: #ef3e34;
+    text-transform: capitalize;
+    font-weight: 400;
+}
 h5{
     font-family: "Lato",'cardinal';
     font-size: 1.5em;
     font-weight: 400;
-    
+    text-indent: 0.5em;
     color: #e5d0d0;
 }
-.carte{
+.carte0{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #e3cda4;;
+    border-style: groove;
+    border-color: #fff8ec;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-radius: 0% 0% 0% 0%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    background-image:url("../images/minuit.jpg");
+
+}
+.carte1{
     /*background-color: #5c5442;
     border-style:groove; 
     border-color:#4a4432;
@@ -82,24 +159,118 @@ h5{
     padding: 1.2rem;
     background-image: url("../images/cuir1.jpg");
 }
-.card-text{
+.carte2{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #e3cda4;
+    border-style: groove;
+    border-color: #e6cb9b;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-radius: 0% 0% 0% 0%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    background-image:url("../images/nrf2.jpg");
+
+}
+.carte3{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #e3cda4;
+    border-style: groove;
+    border-color: #1d1b19;
+    border-left-width: 13px;
+    margin-top: 70px;
+    height: 550px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-radius: 0% 0% 0% 0%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+    background-image:url("../images/actesud.jpg");
+
+}
+.card-text0{
+    font-family: 'BergamoStd-Regular',sans- serif;
+    font-weight: 400;
+    color: #251010;
+    font-size: 0.7rem;
+}
+.card-text2{
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    color: #251010;
+    
+}
+.card-text1{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     color: #e5d0d0;
     
 }
-.cadre{
-    width: 86%;
+.card-text3{
+    font-family: 'LiberationSerif-Regular', serif;
+    font-weight: 400;
+    color: #e5d0d0;
+    
+}
+.cadre0{
+    width: 84%;
     margin: 0px;
     min-height: 0px;
     position: absolute;
     
     height: 239px;
-    top: 164px;
-    left: 8.5%;
+    top: 168px;
+    left: 9%;
+    opacity: 0.83
 
 }
-.chevrondroit{
+.cadre2{
+    width: 73%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 239px;
+    top: 180px;
+    left: 15%;
+    opacity: 0.75;
+
+}
+.cadre1{
+    width: 74%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 231px;
+    top: 173px;
+    left: 12.5%;
+
+}
+.cadre3{
+    width: 86%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 239px;
+    bottom: 56px;
+    left: 18.9%;
+
+}
+.chevrondroit0{
     position: absolute;
     top:250px;
     right: 40px;
@@ -110,10 +281,10 @@ h5{
     z-index: 20;
     opacity: 0.5;
 }
-.chevrongauche{
+.chevrongauche0{
     position: absolute;
     top:250px;
-    left: 50px;
+    left: 61px;
     font-family: 'Raleway', sans-serif;
     font-size: 1.8em;
     color: #fee;
@@ -121,31 +292,191 @@ h5{
     z-index: 20;
     opacity: 0.5;
 }
-.chevrondroit:hover{
+.chevrondroit1{
+    position: absolute;
+    top:250px;
+    right: 67px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche1{
+    position: absolute;
+    top:250px;
+    left: 71px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit2{
+    position: absolute;
+    top:250px;
+    right: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche2{
+    position: absolute;
+    top:250px;
+    left: 76px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrondroit3{
+    position: absolute;
+    bottom: 139px;
+    right: 77px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+.chevrongauche3{
+    position: absolute;
+    bottom: 139px;
+    left: 93px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    color: #fee;
+    width: 20px;
+    z-index: 20;
+    opacity: 0.5;
+}
+
+.chevrondroit0:hover{
     cursor: pointer;
     opacity: 0.9;
     transition: 0.5s;
 }
-.chevrongauche:hover{
+.chevrongauche0:hover{
     cursor: pointer;
     opacity: 0.9;
     transition: 0.5s;
 }
-.rens{
+.chevrondroit0:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche0:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit1:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche1:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit2:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche2:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrondroit3:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche3:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.rens0{
     position: absolute;
     bottom: 70px;
     color: #f4efef;
     width: 80%;
     right: -4%;
 }
-.date{
+.rens1{
     position: absolute;
-    bottom: 10px;
+    bottom: 70px;
     color: #f4efef;
     width: 80%;
     right: -4%;
 }
-.enluminure{
+.rens2{
+    position: absolute;
+    bottom: 70px;
+    color: #f4efef;
+    width: 80%;
+    right: -4%;
+}
+.rens3{
+    position: absolute;
+    top: 181px;
+    left: 8%;
+    color: #f4efef;
+    width: 80%;
+    text-align: right;
+
+}
+.date0{
+    position: absolute;
+    bottom:2px;
+    
+    width: 80%;
+    right: -10%;
+}
+.date1{
+    position: absolute;
+    bottom:18px;
+    
+    width: 80%;
+    right: -12%;
+}
+.date2{
+    position: absolute;
+    bottom: 10px;
+    
+    width: 80%;
+    right: -16%;
+}
+.date3{
+    position: absolute;
+    bottom: 10px;
+    
+    width: 80%;
+    right: -9%;
+}
+.enluminure0{
+    display: none;
+}
+.enluminure2{
+    display: none;
+}
+.enluminure3{
+    display: none;
+}
+.enluminure1{
     position: absolute;
     bottom: 8px;
     left: 41px;
@@ -157,16 +488,49 @@ h5{
     left: 49px;
     opacity: 0.65;
 }
-.photocadre{
+.photocadre1{
     width: 91%;
-    height: 232px;
+    height: 210px;
     z-index:1;
     position:absolute;
     overflow: hidden;
-    border-radius: 5%;
+    border-radius: 18% 25%;
     border-style: groove;
-    border-color: #895038;
-    border-width: 3px;
+    border-color: #8f5b3b;
+    border-width: 4px;
+}
+.photocadre0{
+    width: 91%;
+    height: 228px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 3%;
+    border-style: groove;
+    border-color: #e3cda4;
+    border-width: 1px;
+}
+.photocadre2{
+    width: 89%;
+    height: 205px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 3%;
+    border-style: groove;
+    border-color: #e3cda4;
+    border-width: 1px;
+}
+.photocadre3{
+    width: 67%;
+    height: 228px;
+    z-index:1;
+    position:absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    border-style: groove;
+    border-color: #e3cda4;
+    border-width: 1px;
 }
 .photocadre.hidden{
     padding-bottom: 0;
@@ -179,4 +543,33 @@ h5{
 .jumbotron{
     background-color:    #f2eded;
 
+}
+.ville0{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.ville2{
+    font-size: 1.3rem;
+}
+.ville1{
+    font-size: 1.3rem;
+}
+.ville3{
+    font-size: 1rem;
+}
+.prix0{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.prix2{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.prix1{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.prix3{
+    font-size: 0.8rem;
+    font-weight: 400;
 }

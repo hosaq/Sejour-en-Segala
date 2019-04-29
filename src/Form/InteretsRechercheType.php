@@ -20,7 +20,7 @@ class InteretsRechercheType extends AbstractType
             ->add('nom', TextType::class, [
                 'required'=>false,
                 'label'=>false,
-                'attr'=>['placeholder'=>'Nom du centre dintérêt']
+                'attr'=>['placeholder'=>'Nom du centre d\'intérêt']
             ])
             /*->add('ville',TextType::class,[
                 'required'=>false,

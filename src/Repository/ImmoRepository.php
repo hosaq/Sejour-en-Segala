@@ -59,7 +59,7 @@ class ImmoRepository extends ServiceEntityRepository
                 ->setParameter('distance', $recherche->getDistance());
         }
         
-        if($recherche->getVille()){
+        if($recherche->getVille()&&$recherche->getVille()!="undefined"){
             $query=$query
                     ->andWhere('p.ville= :ville')
                     ->setParameter('ville', $recherche->getVille());

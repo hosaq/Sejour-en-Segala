@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="css/cartevertical.css">
-    <link rel="stylesheet" type="text/css" href="css/ventevertical.css">
-    <link rel="stylesheet" type="text/css" href="css/menuvertical.css">
+    <link rel="stylesheet" type="text/css" href="css/carteverticalcouleur.css">
+    <link rel="stylesheet" type="text/css" href="css/venteverticalcouleur.css">
+    <link rel="stylesheet" type="text/css" href="css/menuverticalcouleur.css">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">   
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Muli|Quicksand|Raleway|Tajawal" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> 
 {% endblock %}
     
 {% block body %}
@@ -17,13 +18,12 @@
     <div class="herbe" >
         <img src="/images/herbe.jpg" class="transparent" style="z-index: 10;" alt="image">
     </div>
-    <div class="italie" >
+    <!--<div class="italie" >
         <img src="/images/carrelogo.jpg" class="transparente" style="z-index: 10;" alt="image">
-    </div>
+    </div>-->
+
     <div class="parent">
-        {% block barre%}
-            {%include 'immo/menuvertical.html.twig'%}
-        {% endblock %}
+        
         <div class="jumbotron">
             
                 {{form_start(form)}}
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col">
                         
-                            <button class="btn btn-primary" style='background-color: #5c4942; border-color: #322;width: 165px;'>Rechercher</button>
+                            <button class="btn btn-primary" style='background-color: #ae2030; border-color: #a12;width: 165px;'>Rechercher</button>
                         
                     
                 </div>
@@ -53,12 +53,19 @@
             </div>
         </div>      
         <div class="container mt-4">
-            <h1 style=' margin-left: -2%'>Ventes en pays médiéval :</h1>
+            <h1 style=' margin-left: -17%;    margin-bottom: 33px;'><span class='medieval' style="font-style: italic;color:#eae0e0;margin-right: 2px;font-size: 3.2rem;">L</span>ocations 
+                <span class='medieval' style="font-style: italic;color:#eae0e0;margin-right: 7px;font-size: 3.2rem;">I</span>maginaires :</h1>
+                    {% block barre%}
+            {%include 'immo/menucouleur.html.twig'%}
+    {% endblock %}
+                
+                
             <div class="row flex">
                 {% for biens in bien%}
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         {%include 'immo/cartevertical.html.twig'%}
+                        
                     </div>
 
                 {%endfor%}
@@ -69,14 +76,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
 
 {% endblock %}
 {% block javascripts %}

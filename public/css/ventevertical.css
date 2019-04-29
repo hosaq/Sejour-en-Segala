@@ -17,8 +17,16 @@ body{
     background-position: center top;
     background-size: auto;
     background-repeat: no-repeat;
+    background-color: #b02233 !important;
     
 }
+hr{
+    border: 1px solid #fdd;
+    width:40%;
+    margin-top: 3rem;
+    margin-right: -20%;
+}
+    
 
 .parent{
     display: grid;
@@ -28,14 +36,18 @@ body{
 }
 
 .jumbotron {
-    background-color: #392626;
+    background-color: #b9223a;
     margin-top: 300px;
     
-    height: 900px;
+    height: 790px;
     justify-self: center;
     padding-top: 50px;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 7% 15% / 10% 20%;
+    border-style: solid;
+    border-color: #b01030;
+    border-width: 1px;
          
 }
 .formulaire{
@@ -52,7 +64,7 @@ body{
     
 }
 .transparent{
-    opacity: 0.03;
+    opacity: 0.05;
     height: 1000px;
     width: 375px;
 }
@@ -73,4 +85,9 @@ body{
 }
 .form-contro{
     background-color: #f2eded;
+}
+
+.pagination{
+    margin-top: 40px;
+    padding-left: 22%;
 }

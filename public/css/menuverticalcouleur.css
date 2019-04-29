@@ -1,0 +1,145 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://themes.getmotopress.com/mountainview/wp-content/themes/mountainview/images/bg_image.jpg");
+    background-position: center top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.imageprincipale{
+   
+}
+.ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+}
+
+.lora{
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+}
+
+body, button, input, select, optgroup, textarea {
+    color: #383838;
+    font-family: Lora, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.barre{
+    padding-top: 130px;
+    padding-left: 5px;
+    padding-right: 10px;
+    background-color: #b9223a !important;
+    display: grid;
+    grid-template-columns: 80px; 
+    grid-template-rows: repeat(6, 150px); 
+    opacity: 0.79;
+    border-style: solid;
+    border-color: #b01030;
+    border-width: 1px;
+}
+
+a{
+    text-align: center;
+}
+
+.nav-link {
+   
+    padding: .4rem .19rem;
+
+}
+.medievalr{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4em;
+    margin-right: -6px;
+    color: #aa2233;
+    text-transform: capitalize;
+}
+
+
+.menu{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
+  grid-template-rows: 40px 40px;
+  grid-template-areas: "a . b . c . d ." ". e . f . g . h";
+  grid-row-gap:15px;
+  
+}
+.principal{
+    background-color: #1a8bf9;
+    grid-area: a;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+}
+.culture{
+     background-color:#ffa808;
+    grid-area: b;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.villes{
+     background-color:#1a8bf9;
+    grid-area: c;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.paysages{
+     background-color:#dd133c;
+    grid-area: d;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.festivals{
+    background-color: #dd133c;
+    grid-area: e;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.nourritures{
+     background-color:#807e7e;
+    grid-area: f;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.sportives{
+     background-color:#ffa808;
+    grid-area: g;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.autres{
+     background-color:#807e7e;
+    grid-area: h;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}

@@ -48,6 +48,7 @@ mesoptions=[['Mucisical','littéraire','Artistique','Autres'],
        ['En voiture', 'A pied','Autres'],
        ['Autres']
 ];
+
       
 console.log(mesoptions[6][0]);
 let nombre;
@@ -66,7 +67,7 @@ function ajoute(index1,nombre){
   
  console.log(index1+"nombre"+menu2.length); 
 for (let i = 0; i < nombre; i++) {
-    menu2[i] = new Option(mesoptions[index1][i],"\'"+mesoptions[index1][i]+"\'");
+    menu2[i] = new Option(mesoptions[index1][i],mesoptions[index1][i]);
     }
 }
 function suppr(){

@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -17,6 +19,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class Interets
 {
+    
+       
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -41,8 +45,10 @@ class Interets
 
     /**
      * @ORM\Column(type="string", length=128, nullable=true)
+     * @@Assert\Choice({'Mucisical','littéraire','Artistique','Autres','Musée','Exposition','Historique','Vie quotidienne','Médiatheque',
+    'Boutiques','Marchés','Producteurs','Grandes','Moyenne','Bourg','Villages','A pied','A velo','Aquatiques','Tournois','En voiture', 'A pied'})
      */
-    private $type2;
+    protected $type2;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -139,10 +145,16 @@ class Interets
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updated_at;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Immo", mappedBy="centreinterets")
+     */
+    private $immos;
     
     public function  __construct()
     {
         $this->date=new \DateTime();
+        $this->immos = new ArrayCollection();
     }
 
     
@@ -457,4 +469,35 @@ class Interets
 
         return $this;
     }
+
+    /**
+     * @return Collection|Immo[]
+     */
+    public function getImmos(): Collection
+    {
+        return $this->immos;
+    }
+
+    public function addImmo(Immo $immo): self
+    {
+        if (!$this->immos->contains($immo)) {
+            $this->immos[] = $immo;
+            $immo->addCentreinteret($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImmo(Immo $immo): self
+    {
+        if ($this->immos->contains($immo)) {
+            $this->immos->removeElement($immo);
+            $immo->removeCentreinteret($this);
+        }
+
+        return $this;
+    }
+    
+    
 }
+

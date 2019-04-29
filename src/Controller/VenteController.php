@@ -40,7 +40,7 @@ class VenteController extends AbstractController
                 12
         
         );
-        return $this->render('immo/ventevertical.html.twig',[
+        return $this->render('immo/ventemoderne.html.twig',[
             'bien'=>$bien,
             'form'=>$form->createView()
             ]);
