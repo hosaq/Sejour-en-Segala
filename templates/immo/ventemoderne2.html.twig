@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="css/cartemoderne.css">
+    <link rel="stylesheet" type="text/css" href="css/ventemoderne.css">
+    <link rel="stylesheet" type="text/css" href="css/cartemoderne2.css">
+    <link rel="stylesheet" type="text/css" href="css/ventemoderne2.css">
+    <link rel="stylesheet" type="text/css" href="css/menumoderne2.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Italiana|ZCOOL+XiaoWei" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Muli|Quicksand|Raleway|Tajawal" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> 
+{% endblock %}
+
+{% block body %}
+    <!--
+        <div class="herbe" >
+            <img src="/images/herbe.jpg" class="transparent" style="z-index: 10;" alt="image">
+        </div>-->
+    <div class="italie" >
+        <img src="/images/maison2.png" class="transparente" style="z-index: 10;" alt="image">
+    </div>
+    <div class="jumbotron">
+
+        {{form_start(form)}}
+        <div class="formulaire">
+            <div class="col">
+                {{form_row(form.Prixmax)}}
+            </div>
+            <div class="col">
+                {{form_row(form.Surfacemin)}}
+            </div>
+            <div class="col">
+                {{form_row(form.Ville)}}
+            </div>
+            <div class="col">
+                {{ form_row(form.address, {id: 'search_address'}) }}
+            </div>
+            <div class="col">
+                {{ form_row(form.distance) }}
+            </div>
+            <div class="col">
+
+                <button class="btn btn-primary" style='background-color: #ccc; border-color: #e6e6e6;width: 165px;border-radius: 10px'>Rechercher</button>
+
+
+            </div>
+            {{form_end(form)}}
+        </div>
+    </div>  
+    <div class="parent">
+        {% block barre %}
+            {%include 'immo/menumoderne2.html.twig'%}
+        {% endblock %}
+
+        <div class="container mt-4">
+            <!--<h1 style=' margin-left: -13.5%;    margin-bottom: 33px;'><span class='medieval' style="font-style: italic;color:#eae0e0;margin-right: 2px;font-size: 3.2rem;">L</span>ocations 
+                <span class='medieval' style="font-style: italic;color:#eae0e0;margin-right: 7px;font-size: 3.2rem;">I</span>maginaires :</h1>
+            -->
+
+
+            <div class="row flex">
+                {%set choixcarte=0%}
+                {% for biens in bien%}
+                    {% if choixcarte is divisible by(2) %}
+                        <div class="col-md-6" style="margin-top: 5px;margin-bottom: 35px;">
+                            {%include 'immo/cartemoderne.html.twig'%}
+                        </div>
+                    {%else%}
+                        <div class="col-md-6" style="margin-top: 5px;margin-bottom: 35px;">
+                            {%include 'immo/cartemoderne2.html.twig'%}
+                        </div>
+                    {%endif%}
+                    {%set choixcarte=choixcarte+1%}
+
+                {%endfor%}
+            </div>
+            <div class="pagination">
+                {{knp_pagination_render(bien)}}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script src="js/slidephotosmoderne.js"></script>
+
+    {{ encore_entry_script_tags('app') }}
+    <script src="{{ asset('build/app.js') }}"></script>
+    <!-- Renders app.js & a webpack runtime.js file
+            <script src="/build/runtime.js"></script>
+            <script src="/build/app.js"></script> -->
+
+{% endblock %}

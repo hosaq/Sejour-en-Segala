@@ -1,0 +1,209 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2019, 17:10:09
+    Author     : gi
+*/
+
+
+
+.carte4{
+    /*background-color: #5c5442;
+    border-style:groove; 
+    border-color:#4a4432;
+    border-left-width: 10px;*/
+    background-color: #fff;
+    margin-top: 0px;
+    height: 720px;
+    padding-top: 0.3rem;
+    padding-right: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.8rem;
+
+}
+
+.card-text42{
+    font-family: 'BergamoStd-Regular',sans- serif;
+    font-weight: 400;
+    color: #251010;
+    font-size: 0.7rem;
+}
+
+.cadre42{
+    width: 47%;
+    margin: 0px;
+    min-height: 0px;
+    position: absolute;
+    height: 270px;
+    top: 25px;
+    left: 2%;
+    opacity: 1.03;
+
+}
+.titre2{
+    width: 44%;
+    position: absolute;
+    left: 54%;
+    top:1.8%
+}
+
+.chevrondroit42{
+    
+    right: 52%;
+   
+}
+.chevrongauche42{
+    
+    left: 4%;
+    
+}
+
+
+.chevrondroit4:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.chevrongauche4:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.rens42{
+    position: absolute;
+    top: 19%;
+    color: #332222;
+    width: 42%;
+    left: 52%;
+    max-height: 54%;
+    overflow: hidden;
+    background-color: #eee;
+    
+}
+
+.date42{
+    position: absolute;
+    bottom:2px;
+    
+    width: 25%;
+    left: 64%;
+}
+
+.enluminure4{
+    position: absolute;
+    bottom: 0px;
+    left: 48.3%;
+    height:720px;
+    width: 20px;
+    opacity: 0.2;
+}
+.liseret{
+    width: 20px;
+    left: 49px;
+    opacity: 0.65;
+}
+
+
+.photocadre4{
+    width: 94%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.photocadre.hidden{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-height: 0;
+    
+}
+
+.ville42{
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin-left: 2%;
+}
+
+.prix4{
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin-left: 3%;
+}
+.description2{
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #211;
+    text-align: left;
+    padding-right:3%;
+    padding-left: 0%;
+    text-indent: 1.9em;
+    line-height: 1.35rem;
+    margin-top: 2%;
+    background-color: #eee;
+    margin-right: 15%;
+    margin-left: 4%;
+}
+.chambre42{
+       height: 26%;
+width: 16%;
+position: absolute;
+bottom: 13%;
+right: 57%;
+z-index: 11;
+}
+.region42{
+    height: 26%;
+width: 16%;
+position: absolute;
+bottom: 13%;
+right: 79%;
+z-index: 11;
+}
+.ichambre4{
+   height: 100%;
+width: 100%;
+
+}
+.iregion4{
+    height: 100%;
+width: 100%;
+
+}
+.trait2{
+    width: 38%;
+    height: 1px;
+    color: #ffa808;
+    background-color: #ffa808;
+    border: 0;
+    position: absolute;
+    top: 70%;
+    left: 55%;
+
+}
+.orange2{
+    position: absolute;
+    bottom: 12%;
+    right: 77%;
+    opacity: 0.9;   
+}
+.orangec2{
+    position: absolute;
+    bottom: 12%;
+    right: 55%;
+    opacity: 0.9;   
+}
+.card-title{
+    margin-bottom: .4rem;
+    text-indent: -1.89rem;
+    
+}
+.medieval42{
+    margin-left: 0.2em;
+}

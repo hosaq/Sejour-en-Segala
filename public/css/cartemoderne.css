@@ -42,7 +42,7 @@ body{
 }
 
 a{
-    color: #e5d0d0;
+    color: #fff;
     
 }
 .lien0{
@@ -66,7 +66,18 @@ a{
 .lien4{
      font-family: 'EB Garamond', serif;
     color: #322;
-     font-size: 1.3rem;
+     font-size: 1.9rem;
+     line-height: 1;
+     font-weight: 400;
+}
+.card-title{
+    margin-bottom: .4rem;
+    text-indent: -1.89rem;
+}
+.titre{
+    width: 47%;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 h1{
     color: #eae0e0;
@@ -219,15 +230,16 @@ h5{
     border-style:groove; 
     border-color:#4a4432;
     border-left-width: 10px;*/
-    background-color: #fff7f7;
+    background-color: #fff;
     margin-top: 0px;
     height: 720px;
-    padding-top: 1.5rem;
+    padding-top:0.3rem;
     padding-right: 1.8rem;
     padding-bottom: 1.8rem;
     padding-left: 1.8rem;
 
 }
+
 .card-text0{
     font-family: 'BergamoStd-Regular',sans- serif;
     font-weight: 400;
@@ -505,13 +517,13 @@ h5{
 }
 .rens4{
     position: absolute;
-    top: 13%;
+    top: 18%;
     color: #332222;
-    width: 45%;
+    width: 42%;
     left: 5.2%;
-    max-height: 61%;
+    max-height: 54%;
     overflow: hidden;
-    
+    background-color: #fff;
 }
 .date0{
     position: absolute;
@@ -656,7 +668,7 @@ h5{
 .ville4{
     font-size: 0.6rem;
     font-weight: 400;
-    margin-left: -2%;
+    margin-left: 0%;
 }
 .prix0{
     font-size: 0.9rem;
@@ -680,17 +692,18 @@ h5{
     margin-left: 3%;
 }
 .description{
-    font-size: 0.86rem;
+    font-size: 0.8rem;
     font-weight: 200;
     color: #211;
-    text-align: justify;
-    padding-right:4%;
+    text-align: right;
+    padding-right:0%;
     padding-left: 3%;
     text-indent: 1.9em;
     line-height: 1.35rem;
-    margin-top: 8%;
-    background-color: #faf1f4;
-    margin-right: 8%;
+    margin-top: 5%;
+    background-color: #fff;
+    margin-right: 5%;
+    margin-left: 16%;
 }
 .chambre4{
        height: 26%;
@@ -740,7 +753,4 @@ width: 100%;
     bottom: 12%;
     right: 10%;
     opacity: 0.9;   
-}
-.card-title{
-    margin-bottom: .4rem;
 }

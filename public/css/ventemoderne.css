@@ -17,8 +17,9 @@ body{
     background-position: center top;
     background-size: auto;
     background-repeat: no-repeat;
-    background-color: #b02233 !important;
-    
+    background-color: #bbd7e2 !important;
+    /*#f6f6f9 gris clair
+    #0e3052 bleu fonce*/
 }
 hr{
     border: 1px solid #fdd;
@@ -43,7 +44,7 @@ hr{
     justify-self: center;
 }
 .jumbotron {
-    background-color: #b02233;
+    background-color: #bbd7e2 ;
     margin-top: 20px;
     margin-left: 19%;
     margin-bottom: 10px;
@@ -55,7 +56,7 @@ hr{
     padding-right: 10px;
     border-radius: 10% 5% / 10% 5%;
     border-style: solid;
-    border-color: #b02233;
+    border-color: #bbd7e2;
     border-width: 1px;
          
 }
@@ -78,16 +79,14 @@ hr{
     width: 375px;
 }
 .italie{
-    position: absolute;
-    top: 37px;
-    left: 208px;
-    
+    position: fixed;
+    top: 6%;
+    left: 6.3%;
 }
 .transparente{
-    opacity: 0.90;
-    height: 109px;
-    width: 222px;
-    border-radius: 5% 7% / 1% 20%;
+    opacity: 1;
+    height: 38px;
+    width: 49px;    
 }
 .col{
     display:inline-block;

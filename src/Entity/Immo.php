@@ -248,12 +248,18 @@ class Immo
      * @ORM\ManyToMany(targetEntity="App\Entity\Interets", inversedBy="immos")
      */
     private $centreinterets;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Booking", mappedBy="bien")
+     */
+    private $bookings;
     
     public function  __construct()
     {
         $this->date=new \DateTime();
         $this->photos = new ArrayCollection();
         $this->centreinterets = new ArrayCollection();
+        $this->bookings = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -841,6 +847,37 @@ class Immo
     {
         if ($this->centreinterets->contains($centreinteret)) {
             $this->centreinterets->removeElement($centreinteret);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Booking[]
+     */
+    public function getBookings(): Collection
+    {
+        return $this->bookings;
+    }
+
+    public function addBooking(Booking $booking): self
+    {
+        if (!$this->bookings->contains($booking)) {
+            $this->bookings[] = $booking;
+            $booking->setBien($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBooking(Booking $booking): self
+    {
+        if ($this->bookings->contains($booking)) {
+            $this->bookings->removeElement($booking);
+            // set the owning side to null (unless already changed)
+            if ($booking->getBien() === $this) {
+                $booking->setBien(null);
+            }
         }
 
         return $this;
